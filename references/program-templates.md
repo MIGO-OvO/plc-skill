@@ -1,31 +1,41 @@
 # Program templates
 
-Use this file when the user asks for reusable logic structure rather than a one-off answer.
+Use this file when the user needs reusable logic structures.
 
-## Prefer template-first outputs for
+## Template selection
 
-- motor start and stop logic
+Choose the nearest reusable pattern:
+
+- start / stop control
 - mode selection
-- state machines
 - sequence control
-- alarm latch and reset logic
-- interlocks
-- debounce or timing patterns
-- fault reset and recovery logic
+- state machine
+- alarm latch and reset
+- interlock block
+- debounce / filter timing
+- fault reset and recovery
 
-## Template pattern
+## Output rule
 
-For each template, try to present:
+Do not jump straight into a full monolithic program.
+Prefer:
+1. template purpose
+2. assumptions
+3. module boundary
+4. variable / device suggestion
+5. ST skeleton
+6. scan notes
+7. debug checklist
 
-1. purpose
-2. known conditions
-3. assumptions
-4. module boundary
-5. variable or device suggestions
-6. ST or pseudocode skeleton
-7. scan-behavior notes
-8. debug checklist
+## Recommended template files
 
-## Engineering rule
+If available, use:
+- `templates/state-machine-template.md`
+- `templates/alarm-latch-reset-template.md`
+- `templates/alarm-interlock-module-template.md`
+- `templates/start-stop-interlock-template.md`
+- `templates/sequence-step-template.md`
+- `templates/timer-counter-diagnostic-template.md`
+- `templates/output-ownership-review-template.md`
 
-Prefer templates that can be adapted across similar projects in GX Works2 Structured Project rather than snippets tightly bound to one unnamed machine.
+If a matching template does not exist, produce a compact reusable skeleton instead of a large one-off program.
