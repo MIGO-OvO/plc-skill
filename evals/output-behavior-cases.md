@@ -1,33 +1,85 @@
 # Output behavior eval cases
 
-## Case 1: Code generation
+## Case O1: Code generation shape
 
-Expected:
+Should trigger:
+
+- generation output format
+
+Task type:
+
+- output behavior
+
+Required:
+
 - requirement understanding
 - assumptions
 - structured design before code
 - ST skeleton or code
 - test checklist
 
-## Case 2: Code explanation
+Forbidden:
 
-Expected:
+- immediate monolithic code dump with no structure
+
+## Case O2: Code explanation shape
+
+Should trigger:
+
+- explanation output format
+
+Task type:
+
+- output behavior
+
+Required:
+
 - what the code does
 - confirmed facts vs assumptions
 - scan-cycle interpretation
 
-## Case 3: Review / refactor
+Forbidden:
 
-Expected:
+- mixing assumptions into facts without labels
+
+## Case O3: Review or refactor shape
+
+Should trigger:
+
+- review output format
+
+Task type:
+
+- output behavior
+
+Required:
+
 - issue list
 - impact explanation
 - refactoring direction
 - validation checklist
 
-## Case 4: Debugging
+Forbidden:
 
-Expected:
+- cosmetic comments only
+
+## Case O4: Debugging shape
+
+Should trigger:
+
+- debugging output format
+
+Task type:
+
+- output behavior
+
+Required:
+
 - symptom restatement
 - hypotheses separated from facts
 - practical debug plan
 - safe verification points
+
+Forbidden:
+
+- unsupported single-cause certainty

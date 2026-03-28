@@ -2,13 +2,16 @@
 
 Use this file when the request depends on Mitsubishi FX3U platform behavior, engineering limits, or model-specific caution.
 
-## Evidence basis in current local docs
+## Evidence basis
 
-Primary local sources currently available for this topic include:
+This file compresses the FX3U-specific constraints and conservative rules that most often affect generation, explanation, review, and troubleshooting tasks.
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fx_series_programming/mitsubishielectric__fx3u__programming_manual_basic_applied_instructions__en__jy997d16601.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fx3u_hardware/mitsubishielectric__fx3u__hardware_manual__en__jy997d15401e.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_device_common__en__jy997d16701.pdf`
+Use it for:
+
+- FX3U-first platform scoping
+- conservative handling of syntax and feature assumptions
+- hardware-boundary caution
+- FX3U-centered troubleshooting order
 
 ## Scope of this reference
 
@@ -44,14 +47,14 @@ Avoid:
 
 When asked about device usage, instruction behavior, timers, counters, relays, or registers:
 
-- prefer local Mitsubishi manuals before giving a firm conclusion
+- prefer Mitsubishi-focused references before giving a firm conclusion
 - separate documented behavior from engineering convention
 - mark project-local naming or addressing conventions as assumptions unless provided
-- if the exact instruction rule is not confirmed from current docs, say so
+- if the exact instruction rule is not confirmed from bundled references, say so
 
 ## Safety and field-boundary rules
 
-Current local manuals repeatedly emphasize that:
+Mitsubishi-oriented guidance for this skill should be treated conservatively:
 
 - the PLC is a general-purpose industrial product
 - fail-safe and backup measures are required where failure could cause major accidents or losses
@@ -71,7 +74,7 @@ When the request touches hardware limits, wiring, grounding, or analog/special m
 - answer conservatively
 - prefer hardware-manual-backed statements
 - distinguish CPU logic issues from wiring or module-side issues
-- if the local hardware/manual extraction is incomplete, say the hardware detail still needs manual confirmation
+- if bundled hardware detail is incomplete, say the hardware detail still needs manual confirmation
 
 ## Troubleshooting rules for FX3U
 
@@ -87,7 +90,7 @@ For abnormal behavior on FX3U projects, check in this order when possible:
 
 ## Known evidence gaps
 
-Current local docs are enough to establish FX3U-first scope and conservative behavior, but not enough yet to claim every detailed instruction rule has been extracted into text form.
+This file is enough to establish FX3U-first scope and conservative behavior, but not enough to claim every detailed instruction rule has been fully extracted.
 
 If the answer depends on:
 
@@ -96,4 +99,4 @@ If the answer depends on:
 - exact declaration or device allocation rule
 - exact analog / communication module detail
 
-say that document confirmation is still required from the relevant Mitsubishi manual.
+say that Mitsubishi manual confirmation is still required.

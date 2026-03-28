@@ -4,11 +4,14 @@ Use this file when the request depends on FX3U device usage, instruction interpr
 
 ## Evidence basis
 
-Primary local sources currently available:
+This file compresses recurring FX3U-oriented reasoning from Mitsubishi programming and structured-programming material.
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fx_series_programming/mitsubishielectric__fx3u__programming_manual_basic_applied_instructions__en__jy997d16601.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_device_common__en__jy997d16701.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_basic_applied_instruction__en__jy997d36701.pdf`
+Use it for:
+
+- device-role interpretation
+- timer and counter troubleshooting logic
+- instruction explanation boundaries
+- maintainability review of device usage
 
 ## Purpose of this reference
 
@@ -21,7 +24,7 @@ When the user asks what a device, instruction, timer, counter, or register is do
 
 - prefer a device-role explanation before a generic PLC explanation
 - distinguish documented behavior from project-specific usage
-- do not invent exact Mitsubishi semantics if not confirmed from local manuals
+- do not invent exact Mitsubishi semantics if not confirmed from bundled or official material
 
 ## Device-role interpretation rule
 
@@ -52,7 +55,7 @@ Do not jump to "timer broken" or "counter broken" without checking the enabling 
 When asked about an instruction:
 
 - if the exact Mitsubishi instruction meaning is needed, rely on Mitsubishi programming manuals
-- if local extraction is incomplete, say manual confirmation is still required
+- if bundled extraction is incomplete, say manual confirmation is still required
 - if the user only needs engineering interpretation, explain likely control intent first, then note where exact manual confirmation matters
 
 ## Practical explanation pattern

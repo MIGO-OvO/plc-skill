@@ -2,13 +2,15 @@
 
 Use this file when the request concerns GX Works2 Structured Project layout, modular engineering style, or maintainability-oriented project organization.
 
-## Evidence basis in current local docs
+## Evidence basis
 
-Primary local sources currently available for this topic include:
+This file compresses the guidance that matters most for skill execution:
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/gxworks2_structured_project/mitsubishielectric__gxworks2__structured_project__programming_manual__en__jy997d40901e.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/gxworks2_structured_project/mitsubishielectric__gxworks2__structured_project__beginners_manual__en__jy997d16801.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_device_common__en__jy997d16701.pdf`
+- GX Works2 structured-project programming concepts
+- beginner-oriented project organization guidance
+- FXCPU structured programming patterns that affect modular ST work
+
+If the task depends on exact editor workflow, exact object naming, or exact compiler limitation, direct Mitsubishi manual confirmation is still required.
 
 ## What this reference is for
 
@@ -72,19 +74,12 @@ If the user does not provide the actual project tree or module list:
 - mark it as a recommended project organization, not a confirmed reconstruction
 - ask only for the minimum missing structure details if they matter to the answer
 
-## Conservative note on evidence
+## Practical compressed guidance
 
-Current local GX Works2 structured-project files are present, but extracted text access is incomplete.
-So this file should be treated as:
+Use structured-project reasoning to keep these concerns visible:
 
-- document-aligned project-organization guidance
-- not a claim that every GX Works2 menu, declaration rule, or editor behavior is already fully extracted into the skill
-
-If the task depends on:
-
-- exact GX Works2 project object types
-- exact declaration workflow
-- exact editor or compiler limitation
-- exact project navigation behavior
-
-say that the programming manual or beginner's manual should be checked directly.
+- one place for output ownership when practical
+- clear separation between normal sequence flow and protection logic
+- explicit fault, reset, and restart behavior
+- state visibility that supports online monitoring
+- module boundaries that make future edits less risky

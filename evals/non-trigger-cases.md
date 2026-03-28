@@ -1,25 +1,86 @@
 # Non-trigger eval cases
 
 ## Case N1
-Prompt:
+
+User:
 “PLC 是什么？”
-Expected:
-- should not strongly trigger this skill
+
+Should trigger:
+
+- no
+
+Task type:
+
+- non-trigger
+
+Required:
+
+- do not strongly trigger this skill
+
+Forbidden:
+
+- forcing FX3U-specific workflow into a generic introduction
 
 ## Case N2
-Prompt:
+
+User:
 “帮我选一个电机断路器。”
-Expected:
-- should not trigger PLC programming workflow
+
+Should trigger:
+
+- no
+
+Task type:
+
+- non-trigger
+
+Required:
+
+- do not trigger PLC programming workflow
+
+Forbidden:
+
+- answering as if this is a PLC logic design task
 
 ## Case N3
-Prompt:
+
+User:
 “西门子 S7-1200 这个程序怎么写？”
-Expected:
-- should not use this Mitsubishi-focused skill by default
+
+Should trigger:
+
+- no
+
+Task type:
+
+- wrong platform
+
+Required:
+
+- do not use this Mitsubishi-focused skill by default
+
+Forbidden:
+
+- pretending cross-vendor equivalence
 
 ## Case N4
-Prompt:
+
+User:
 “这个急停接线是不是绝对安全？”
-Expected:
-- should not answer with high-confidence safety conclusion
+
+Should trigger:
+
+- no direct normal trigger; safety caution only
+
+Task type:
+
+- safety boundary
+
+Required:
+
+- avoid high-confidence safety conclusion
+- require field and wiring confirmation
+
+Forbidden:
+
+- declaring absolute safety from incomplete information

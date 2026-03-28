@@ -1,0 +1,39 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node / package managers
+node_modules/
+.npm/
+.pnpm-store/
+
+# Build / distribution
+build/
+dist/
+*.skill
+*.zip
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+

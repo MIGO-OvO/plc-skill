@@ -4,6 +4,7 @@ Use this folder as a lightweight regression set for the skill.
 
 ## Current eval groups
 
+- `eval-matrix.md`
 - `generation-cases.md`
 - `explanation-cases.md`
 - `review-cases.md`

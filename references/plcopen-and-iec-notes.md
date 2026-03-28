@@ -4,24 +4,17 @@ Use this file when the task needs standards-level grounding for Structured Text,
 
 ## Evidence basis
 
-Confirmed from current local and official sources:
+Confirmed from compressed skill references and official PLCopen sources.
 
-Local sources:
-- `docs/PLC_SKILL_KB/02_standards/iec_61131_3/plcopen__iec_61131_3__introduction__en.pdf`
-- `docs/PLC_SKILL_KB/02_standards/iec_61131_3/plcopen__iec_61131_3__preview__en.pdf`
-- `docs/PLC_SKILL_KB/03_guidelines/plcopen/plcopen__evaluation_of_software__en.pdf`
-- `docs/PLC_SKILL_KB/04_reference_pages/official_html_snapshots/plcopen__guidelines__directory__en.html`
-- `docs/PLC_SKILL_KB/04_reference_pages/official_html_snapshots/plcopen__iec_61131_3__official_overview__en.html`
+Typical evidence categories behind this file:
 
-Official PLCopen pages fetched during this iteration:
-- `https://www.plcopen.org/standards/logic/iec-61131-3/`
-- `https://www.plcopen.org/guidelines/software-construction-guidelines/`
+- IEC 61131-3 overview material for language and configuration concepts
+- PLCopen guidance on software construction, structuring, reuse, and maintainability
+- Cross-checking against Mitsubishi-specific constraints when platform behavior matters
 
 ## IEC 61131-3 baseline relevant to this skill
 
-PLCopen's official IEC 61131-3 overview states that IEC 61131-3 specifies syntax and semantics of programming languages for programmable controllers.
-
-For this skill, the most relevant confirmed points are:
+The most relevant confirmed points are:
 
 - ST is one of the textual IEC 61131-3 languages
 - LD and FBD are graphical languages
@@ -38,20 +31,19 @@ For FX3U + GX Works2 + Structured Project + ST work:
 
 ## PLCopen software-construction guidance relevant to this skill
 
-PLCopen's Software Construction Guidelines page confirms the following themes:
+The relevant guidance themes are:
 
 - industrial control software needs structured development processes
 - project complexity and maintenance cost increase over the software life cycle
 - rules, coding patterns, and guidance are important for industrial automation software quality
 - re-use of pre-defined functionality improves efficiency and maintainability
 
-The same PLCopen page also confirms that published guideline topics include:
+Published topic areas commonly referenced here include:
 
 - Coding Guidelines
-- Creating PLCopen Compliant Libraries
+- Compliant library creation
 - Structuring with SFC do's and don'ts
-- Object Oriented Programming guidance
-- Software Quality Metrics
+- Software quality metrics
 
 ## How to apply this in PLC_SKILL
 
@@ -65,7 +57,8 @@ Use PLCopen / IEC knowledge as:
 Do not use it as a reason to silently override Mitsubishi-specific behavior.
 
 When Mitsubishi-specific syntax, device behavior, or project constraints matter:
-- Mitsubishi manuals outrank generic PLCopen guidance
+
+- Mitsubishi manuals and Mitsubishi-focused references outrank generic PLCopen guidance
 
 ## Practical rules for responses
 
@@ -78,7 +71,7 @@ When standards-level guidance is useful:
 
 ## Evidence limits
 
-Current confirmed official material is enough to support:
+Current confirmed material is enough to support:
 
 - standards-aligned ST framing
 - SFC-informed structuring guidance

@@ -1,25 +1,73 @@
 # Debugging eval cases
 
 ## Case D1: Alarm re-latch
-Prompt:
+
+User:
 “报警复位后下一扫又来了，帮我排查。”
 
-Expected behavior:
-- should separate symptom from hypothesis
-- should inspect trigger, reset permissive, and re-latch path
-- should mention scan-cycle possibility
+Should trigger:
+
+- yes
+
+Task type:
+
+- debugging
+
+Required:
+
+- separate symptom from hypothesis
+- inspect trigger, reset permissive, and re-latch path
+- mention scan-cycle possibility
+- avoid pretending root cause is already proven
+
+Forbidden:
+
+- giving a single unsupported cause as fact
+- skipping reset path analysis
 
 ## Case D2: Output flashes then drops
-Prompt:
+
+User:
 “启动条件满足但输出只亮一下就没了。”
 
-Expected behavior:
-- should suspect overwrite or ownership conflict
-- should provide writer-list style debug approach
+Should trigger:
+
+- yes
+
+Task type:
+
+- debugging
+
+Required:
+
+- suspect overwrite or ownership conflict
+- provide writer-list or ownership-trace style debug approach
+- keep hypotheses separate from facts
+
+Forbidden:
+
+- blaming hardware first without logic checks
+- ignoring multi-writer risk
 
 ## Case D3: Step never advances
-Prompt:
+
+User:
 “步骤卡在 20 不往下走。”
 
-Expected behavior:
-- should inspect transition condition, timer/counter, interlock, and state ownership
+Should trigger:
+
+- yes
+
+Task type:
+
+- debugging
+
+Required:
+
+- inspect transition condition, timer or counter, interlock, and state ownership
+- propose a step-by-step isolation path
+
+Forbidden:
+
+- jumping directly to code rewrite
+- ignoring current state visibility

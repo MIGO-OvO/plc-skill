@@ -2,16 +2,22 @@
 
 Use this file when reviewing, refactoring, or explaining a GX Works2 Structured Project from a maintainability and fault-isolation perspective.
 
-## Purpose
+## Role boundary
 
-This file turns general review advice into concrete project-review patterns.
+This file defines GX Works2 project-level review patterns.
+It does not replace the shared workflow or the detailed checklists.
+
+Read with:
+
+- `references/debugging-and-review.md` for workflow and refactoring preference
+- `references/code-review-checklists.md` for finding-by-finding checklist output
 
 ## Review priorities
 
 Inspect in this order when possible:
 
 1. module boundaries
-2. step/state ownership
+2. step or state ownership
 3. output ownership
 4. alarm and fault handling
 5. reset behavior
@@ -23,7 +29,7 @@ Healthy signs:
 
 - sequence logic is grouped clearly
 - mode logic is not scattered everywhere
-- alarm logic is not mixed into every output rung/block
+- alarm logic is not mixed into every output rung or block
 - outputs have one obvious decision point
 
 Weak signs:
@@ -38,12 +44,12 @@ Healthy signs:
 - current state or step is visible
 - transition conditions are visible
 - fault branch is visible
-- reset/recovery path is visible
+- reset or recovery path is visible
 
 Weak signs:
 
 - step progression depends on many unrelated bits with no clear owner
-- the current active mode/state cannot be inferred quickly during online debugging
+- the current active mode or state cannot be inferred quickly during online debugging
 
 ## Pattern 3: Output ownership is explicit
 
@@ -77,15 +83,6 @@ High-risk signs:
 - hidden state bits reused for unrelated purposes
 - no clear distinction between process permissive and fault inhibit
 - comments explain intent, but structure still hides execution flow
-
-## Refactoring rule
-
-When suggesting changes:
-
-- prefer structural cleanup over total rewrite
-- preserve the user's likely control intent
-- reduce writer conflicts first
-- make the next debugging session easier, not just the code prettier
 
 ## Suggested review output
 
