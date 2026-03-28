@@ -1,5 +1,5 @@
 ---
-name: PLC_SKILL
+name: plc-skill
 description: Use this skill for Mitsubishi FX3U PLC work in GX Works2 Structured Project using Structured Text (ST), especially when the user wants to design, generate, explain, review, refactor, debug, or troubleshoot PLC logic. Prefer this skill when the request clearly involves FX3U, GX Works2, Structured Project, ST, device usage, sequence logic, state machines, alarms, interlocks, scan-cycle behavior, or structured PLC program organization. Do not prefer this skill for generic electronics, wiring-only questions, non-Mitsubishi platforms, broad automation theory, or high-risk safety conclusions without confirmed field conditions, wiring, and fail-safe context.
 ---
 
