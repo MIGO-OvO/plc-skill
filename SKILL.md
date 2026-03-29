@@ -1,139 +1,184 @@
 ---
 name: plc-skill
-description: Use this skill for Mitsubishi FX3U PLC work in GX Works2 Structured Project using Structured Text (ST), especially when the user wants to design, generate, explain, review, refactor, debug, or troubleshoot PLC logic. Prefer this skill when the request clearly involves FX3U, GX Works2, Structured Project, ST, device usage, sequence logic, state machines, alarms, interlocks, scan-cycle behavior, or structured PLC program organization. Do not prefer this skill for generic electronics, wiring-only questions, non-Mitsubishi platforms, broad automation theory, or high-risk safety conclusions without confirmed field conditions, wiring, and fail-safe context.
+description: General PLC development, explanation, review, refactoring, debugging, and troubleshooting skill across IEC 61131-3 style industrial control work. Use when the request involves PLC logic, sequence control, state machines, alarms, interlocks, timers, counters, I/O mapping, Structured Text (ST), Ladder Diagram (LD), Function Block Diagram (FBD), Sequential Function Chart (SFC), program structure, code review, maintainability, or commissioning/debugging. Route through the common PLC layer first, then prefer the matching vendor path when the user mentions Mitsubishi, Siemens, Omron, Allen-Bradley/Rockwell, Schneider, Delta, Keyence, Panasonic, Beckhoff, or Codesys ecosystems, software, CPU families, device models, or vendor-specific terminology. Do not prefer this skill for generic electronics, pure wiring-only work without logic context, broad industrial networking without control-program context, or high-confidence safety conclusions without confirmed field conditions.
 ---
 
 # PLC Skill
 
-Focus on **Mitsubishi FX3U + GX Works2 + Structured Project + Structured Text (ST)**.
+Treat this as a **general PLC skill with explicit vendor routing**, not as a vague all-brands encyclopedia.
 
-This is a **phase-1 PLC programming skill**, not a general skill for every PLC platform, every IEC language, or every industrial topic.
+Work in two layers:
 
-## Scope
+1. **Common PLC layer**
+2. **Vendor-specific layer** when the platform is identifiable
 
-Prioritize only:
+Always keep these layers separate.
 
-- Mitsubishi FX3U series PLCs
-- GX Works2
-- Structured Project organization
-- Structured Text (ST)
-- Program design
-- Code explanation
-- Code review
-- Refactoring
-- Debugging
-- Troubleshooting
+## Operating model
 
-## Out of scope by default
+First decide whether the request is actually a PLC/programming task.
 
-Do not expand this skill into:
+Then classify it as one of:
 
-- general electronics or PCB questions
-- wiring-only answers without logic context
-- broad industrial networking coverage
-- multi-brand PLC abstractions
-- all IEC 61131-3 languages at once
-- full safety-system design
-- high-confidence conclusions that depend on field wiring or fail-safe behavior
+- common PLC question with no confirmed vendor
+- vendor-specific PLC question
+- mixed / ambiguous vendor question
+- out-of-scope non-PLC question
 
-See `references/scope-and-trigger-rules.md` for trigger and non-trigger examples.
+If the vendor is known, use the matching vendor references first for environment, terminology, program organization, instruction semantics, and tooling behavior.
 
-## Core operating rules
+If the vendor is unknown, answer from the common PLC layer first and explicitly mark which details depend on vendor, model, software, or language.
+
+If the user mixes multiple vendor ecosystems or terms, point out the likely mismatch instead of silently merging them.
+
+## Core boundaries
+
+This skill covers:
+
+- PLC logic design
+- sequence / state-machine / step control
+- alarms, latches, resets, interlocks
+- timers, counters, edge-triggered behavior
+- I/O mapping strategy
+- program organization and modularity
+- debugging and troubleshooting
+- code review and refactoring
+- IEC 61131-3 language-level reasoning
+- ST / LD / FBD / SFC common concepts
+- vendor-specific routing when the platform is known
+
+This skill does not default to:
+
+- generic electronics or PCB work
+- pure wiring-only installation answers without control logic context
+- broad industrial networking coverage with no PLC-program relevance
+- SIL/PL/safety certification conclusions without confirmed field context
+- pretending that one vendor's terminology or syntax applies to all vendors
+
+## Read order
+
+Start with:
+
+- `references/skill-architecture.md`
+- `references/common/scope-and-trigger-rules.md`
+- `references/common/task-router.md`
+- `references/common/knowledge-priority.md`
+- `references/vendors/vendor-routing.md`
+- `templates/common/template-map.md`
+
+Then load only the narrowest files needed.
+
+## Common layer responsibilities
+
+Use the common layer for:
+
+- IEC 61131-3 framing and language-level concepts
+- sequence, state, alarm, interlock, reset, ownership, and scan-cycle reasoning
+- engineering structure and maintainability guidance
+- generic debugging, review, and completeness handling
+- common templates, checklists, and response format
+
+Read from `references/common/` and `templates/common/` first when the vendor is unknown.
+
+## Vendor layer responsibilities
+
+Use a vendor layer for:
+
+- vendor software environment and engineering workflow
+- vendor terminology and model-family cues
+- vendor-specific instruction, device, memory, or tag conventions
+- project organization norms for that platform
+- debugging behavior and common platform pitfalls
+- official manual routing and evidence preference for that ecosystem
+
+Current deepest vendor module:
+
+- Mitsubishi: mature and preferred when Mitsubishi / MELSEC / GX Works / FX / Q / iQ-F / iQ-R cues are present
+
+Prepared expansion modules:
+
+- Siemens
+- Omron
+- Rockwell / Allen-Bradley
+- Schneider
+- Delta
+- Keyence
+- Panasonic
+- Beckhoff
+- Codesys
+
+## Evidence priority
+
+Use evidence in this order:
+
+1. Bundled common references for PLC-generic engineering rules
+2. Bundled vendor references for the identified platform
+3. Vendor official manuals / official software docs
+4. IEC 61131-3 and PLCopen material
+5. Bundled templates and examples
+6. Community material as low-priority supplement
+
+If the answer depends on vendor-specific behavior and the vendor is not confirmed, say so.
+
+## Response rules
 
 Always:
 
-- identify what is known
-- identify what is assumed
-- distinguish confirmed facts from inferences
-- stay conservative in safety-related topics
-- prefer structured and maintainable outputs over one-off code dumps
-- use bundled references, templates, and examples instead of relying on repository-specific absolute paths
+- separate confirmed facts from assumptions
+- say when implementation details depend on vendor/model/software
+- prefer modular, reviewable outputs over giant code dumps
+- use templates/checklists when inputs are incomplete
+- stay conservative in safety-relevant topics
 
-If evidence is insufficient, say what category is missing.
+## Reference map
 
-## Knowledge priority
+Common:
 
-Use sources in this order:
+- `references/common/scope-and-trigger-rules.md`
+- `references/common/task-router.md`
+- `references/common/knowledge-priority.md`
+- `references/common/query-to-doc-routing.md`
+- `references/common/glossary.md`
+- `references/common/plcopen-and-iec-notes.md`
+- `references/common/st-style-guide.md`
+- `references/common/st-output-style.md`
+- `references/common/program-templates.md`
+- `references/common/alarm-and-interlock-patterns.md`
+- `references/common/scan-cycle-and-output-ownership.md`
+- `references/common/debugging-and-review.md`
+- `references/common/debugging-checklists.md`
+- `references/common/code-review-checklists.md`
+- `references/common/input-completeness-rules.md`
+- `references/common/response-fallback-rules.md`
+- `references/common/output-format.md`
+- `references/common/safety-boundaries.md`
 
-1. Bundled references in `references/`
-2. Mitsubishi official manuals and official explanations
-3. IEC 61131-3 related standards knowledge
-4. PLCopen guidance
-5. Bundled templates and examples in `templates/` and `examples/`
-6. Community or forum material
+Routing:
 
-Read:
-- `references/knowledge-priority.md`
-- `references/query-to-doc-routing.md`
+- `references/skill-architecture.md`
+- `references/vendors/vendor-routing.md`
+- `references/vendors/vendor-module-map.md`
+- `references/vendors/vendor-recognition-signals.md`
 
-## Input completeness and fallback behavior
+Mitsubishi:
 
-If information is incomplete, do not pretend certainty.
+- `references/vendors/mitsubishi/mitsubishi-overview.md`
+- `references/vendors/mitsubishi/mitsubishi-fx3u-rules.md`
+- `references/vendors/mitsubishi/fx3u-focus.md`
+- `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
+- `references/vendors/mitsubishi/gxworks2-structured-project.md`
+- `references/vendors/mitsubishi/gxworks2-structured-project-deep-notes.md`
+- `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`
+- `references/vendors/mitsubishi/official-doc-index.md`
 
-Use:
-- `references/input-completeness-rules.md`
-- `references/response-fallback-rules.md`
+Stub vendor modules:
 
-## Task routing
-
-Classify the request first, then read only the narrowest relevant references.
-
-Start with:
-- `references/task-router.md`
-- `templates/template-map.md`
-- `references/output-format.md`
-
-## Safety boundaries
-
-If the request touches:
-- emergency stop logic
-- guard logic
-- motion enable logic
-- forced outputs
-- bypass logic
-- reset after fault or power cycle
-- protection interlocks
-
-Do not present a confident final answer unless field conditions are confirmed.
-
-Read:
-- `references/safety-boundaries.md`
-- `references/response-fallback-rules.md`
-
-## Bundled reference index
-
-Read only what the task needs:
-
-- `references/scope-and-trigger-rules.md`
-- `references/task-router.md`
-- `references/knowledge-priority.md`
-- `references/query-to-doc-routing.md`
-- `references/glossary.md`
-- `references/fx3u-focus.md`
-- `references/mitsubishi-fx3u-rules.md`
-- `references/fx3u-device-and-instruction-notes.md`
-- `references/gxworks2-structured-project.md`
-- `references/gxworks2-structured-project-deep-notes.md`
-- `references/gxworks2-project-review-patterns.md`
-- `references/st-output-style.md`
-- `references/st-style-guide.md`
-- `references/program-templates.md`
-- `references/plcopen-and-iec-notes.md`
-- `references/alarm-and-interlock-patterns.md`
-- `references/scan-cycle-and-output-ownership.md`
-- `references/debugging-and-review.md`
-- `references/input-completeness-rules.md`
-- `references/response-fallback-rules.md`
-- `references/output-format.md`
-- `references/debugging-checklists.md`
-- `references/code-review-checklists.md`
-- `references/safety-boundaries.md`
-
-## Preferred response style
-
-- Engineering-oriented
-- Clear and structured
-- Conservative with confidence
-- Template-first when information is incomplete
-- Modular rather than monolithic
-- Explicit about evidence gaps
+- `references/vendors/siemens/siemens-overview.md`
+- `references/vendors/omron/omron-overview.md`
+- `references/vendors/rockwell/rockwell-overview.md`
+- `references/vendors/schneider/schneider-overview.md`
+- `references/vendors/delta/delta-overview.md`
+- `references/vendors/keyence/keyence-overview.md`
+- `references/vendors/panasonic/panasonic-overview.md`
+- `references/vendors/beckhoff/beckhoff-overview.md`
+- `references/vendors/codesys/codesys-overview.md`
