@@ -37,6 +37,7 @@ Use the skill cautiously and first clarify when the request is ambiguous:
 - “帮我看一下设备点位怎么分配”
 
 Clarify:
+
 - PLC family
 - development software
 - language
@@ -61,6 +62,7 @@ Do not prefer this skill for:
 This is a phase-1 skill.
 
 Stay centered on:
+
 - FX3U
 - GX Works2
 - Structured Project
@@ -68,8 +70,33 @@ Stay centered on:
 - program design / explanation / review / refactor / debug / troubleshoot
 
 Do not silently expand to:
+
 - FX5U
 - GX Works3
 - ladder-heavy workflows
 - communication encyclopedias
 - cross-vendor abstraction
+
+## Working approach
+
+For FX3U tasks:
+
+1. Identify what is confirmed:
+   - exact PLC family or CPU assumption
+   - programming language in use
+   - whether the code is for Structured Project
+   - whether the question concerns design, explanation, review, or troubleshooting
+2. Separate:
+   - documented device or instruction behavior
+   - project-specific conventions
+   - inferred engineering advice
+3. Prefer maintainable device and variable organization over ad-hoc addressing.
+
+## Typical task classes
+
+- Explain device usage and likely role in logic
+- Convert process steps into modular control logic
+- Suggest state-machine or sequence structure
+- Review timer or counter usage
+- Analyze interlocks, alarm holds, resets, and edge conditions
+- Troubleshoot scan-related behavior and overwritten outputs

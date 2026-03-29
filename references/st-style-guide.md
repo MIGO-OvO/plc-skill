@@ -1,5 +1,8 @@
 # ST style guide
 
+**Scope of this file**: naming conventions, variable declarations, code organization, sequence/alarm/output logic structure, and review priorities.
+For response output format and presentation order, see `references/st-output-style.md`.
+
 Use this file when generating, explaining, reviewing, or refactoring Structured Text for this skill.
 
 ## Scope

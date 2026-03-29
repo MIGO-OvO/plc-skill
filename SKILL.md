@@ -102,31 +102,11 @@ Read:
 
 ## Bundled reference index
 
-Read only what the task needs:
+Read `references/task-router.md` first after trigger. It maps task type to the minimum required references.
 
+For scope, routing, and safety boundaries, see also:
 - `references/scope-and-trigger-rules.md`
-- `references/task-router.md`
 - `references/knowledge-priority.md`
-- `references/query-to-doc-routing.md`
-- `references/glossary.md`
-- `references/fx3u-focus.md`
-- `references/mitsubishi-fx3u-rules.md`
-- `references/fx3u-device-and-instruction-notes.md`
-- `references/gxworks2-structured-project.md`
-- `references/gxworks2-structured-project-deep-notes.md`
-- `references/gxworks2-project-review-patterns.md`
-- `references/st-output-style.md`
-- `references/st-style-guide.md`
-- `references/program-templates.md`
-- `references/plcopen-and-iec-notes.md`
-- `references/alarm-and-interlock-patterns.md`
-- `references/scan-cycle-and-output-ownership.md`
-- `references/debugging-and-review.md`
-- `references/input-completeness-rules.md`
-- `references/response-fallback-rules.md`
-- `references/output-format.md`
-- `references/debugging-checklists.md`
-- `references/code-review-checklists.md`
 - `references/safety-boundaries.md`
 
 ## Preferred response style

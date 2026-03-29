@@ -16,7 +16,7 @@ Read:
 - `references/st-style-guide.md`
 - `references/output-format.md`
 
-## 2. Explain existing code or logic
+Check `templates/template-map.md` before writing new logic from scratch. Prefer a matching template over a one-off implementation.
 
 Use when the user provides ST, device lists, logic fragments, or asks what a block is doing.
 
