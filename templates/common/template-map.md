@@ -13,6 +13,9 @@ Use this file to choose the nearest reusable template before writing a large cus
 - Sequence flow with explicit steps
   - `templates/common/sequence-step-template.md`
 
+- Advanced sequence flow (Pause / Resume / Abort handling)
+  - `templates/common/pause-resume-sequence-template.md`
+
 - State-based machine control
   - `templates/common/state-machine-template.md`
 
