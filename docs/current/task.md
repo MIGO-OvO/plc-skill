@@ -53,3 +53,51 @@ Updated: 2025-02-14T00:00:00Z
 - summary|label=summary|fact=safety and incomplete-input guidance are explicit|impact=reduces unsafe overclaiming risk|next=consider golden output calibration
 - summary|label=summary|fact=main repo gap was onboarding/document discoverability|impact=new READMEs close the largest usability gap|next=consider package/release docs
 - summary|label=summary|fact=work was documentation-only with no logic changes|impact=rollback is simple and low-risk|next=version docs when packaging workflow is added
+
+---
+
+## 2025-07-10 P0-P2 Refactor Log
+
+Updated: 2025-07-10T00:00:00Z
+
+### Changes
+
+- P0: `SKILL.md` bundled reference index: 24 entries → 3 core pointers; file 140L→120L; diff=-20L
+- P1-A: `references/fx3u-focus.md` deleted; content merged into `references/scope-and-trigger-rules.md` (Working approach + Typical task classes sections appended); MD032 lint fixed
+- P1-B: `references/query-to-doc-routing.md` + `references/doc-map.md` deleted; merged into new `references/reference-map.md`
+- P2-A: `references/task-router.md` section 1: added template-first rule pointing to `templates/template-map.md`
+- P2-B: `references/st-style-guide.md` + `references/st-output-style.md`: added scope boundary header to each file
+- P2-C: `evals/routing-cases.md`: added RT5-RT9 covering all 5 task-router branches with expected/forbidden reference sets
+
+### Files modified
+
+- `SKILL.md` L103-110 (reference index replaced)
+- `references/scope-and-trigger-rules.md` L80-103 (appended), L39/64/72 (MD032 fixed)
+- `references/task-router.md` L17-19 (template-first rule added)
+- `references/st-style-guide.md` L1-6 (scope header added)
+- `references/st-output-style.md` L1-6 (scope header added)
+- `evals/routing-cases.md` L95-293 (RT5-RT9 appended)
+
+### Files deleted
+
+- `references/fx3u-focus.md` (merged into scope-and-trigger-rules.md)
+- `references/query-to-doc-routing.md` (merged into reference-map.md)
+- `references/doc-map.md` (merged into reference-map.md)
+
+### Files created
+
+- `references/reference-map.md` (merged replacement for query-to-doc-routing + doc-map)
+
+### Gates
+
+- lint: MD032=0, MD012=0
+- deleted files with references confirmed=0 orphan links
+- new file reference-map.md created and consistent
+
+### Remember
+
+- exec|label=scope|fact=SKILL.md reference list compressed 24→3 entries|impact=saves ~30 tokens per trigger|next=none
+- exec|label=api|fact=fx3u-focus.md deleted; content preserved in scope-and-trigger-rules.md|impact=one fewer file to maintain, zero content loss|next=none
+- exec|label=api|fact=query-to-doc-routing+doc-map merged into reference-map.md|impact=eliminates 3-file triangle overlap|next=none
+- exec|label=risk|fact=no logic or trigger content changed|impact=rollback=git restore on 6 files + git rm 3 files|next=none
+- exec|label=quality|fact=all MD lint warnings resolved; no IDE errors|impact=clean baseline for next iteration|next=P3 KB usage doc

@@ -1,5 +1,8 @@
 # ST output style
 
+**Scope of this file**: response output format, section order, and presentation rules when delivering ST code in a response.
+For naming, logic structure, alarm/sequence style, and review priorities, see `references/st-style-guide.md`.
+
 Use this file when generating, explaining, reviewing, or refactoring Structured Text.
 
 ## Output goals
