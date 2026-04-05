@@ -4,6 +4,9 @@ Use this file to choose the nearest reusable template before writing a large cus
 
 ## Common template selection
 
+- Standard equipment module (Auto/Manual/Fault handling)
+  - `templates/common/equipment-module-template.md`
+
 - Start / stop motor or actuator control
   - `templates/common/start-stop-interlock-template.md`
 

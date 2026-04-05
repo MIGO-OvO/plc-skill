@@ -10,9 +10,14 @@ Use this file as a compact cue list for identifying vendor context from user wor
 
 ## Siemens
 
-- Siemens, TIA Portal, STEP 7
+- Siemens, TIA Portal, STEP 7, Simatic Manager
 - S7-1200, S7-1500, S7-300, S7-400
-- OB, FB, FC, DB, tag table, technology object
+- S7-SCL, SCL (Siemens implementation of ST)
+- Organization Block (OB), OB1, OB100, OB35
+- Function Block (FB), Function (FC), Data Block (DB)
+- I/Q/M memory prefix (I0.0, Q0.0, MW10)
+- Instance DB, Multi-instance, Global DB
+- Optimized Block Access
 
 ## Omron
 
