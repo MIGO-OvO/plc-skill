@@ -1,24 +1,20 @@
 ﻿# Beckhoff overview
 
-Use this module when the request is clearly in the Beckhoff ecosystem.
+Use this module when the request is clearly in the Beckhoff / TwinCAT 3 ecosystem.
 
 ## Current state
 
-This vendor module is a scaffold, not yet a deep ruleset.
+This module covers the core conventions of TwinCAT 3, its Codesys heritage, and its specific I/O mapping syntax.
 
-## What to do now
+## Reference Priority
 
-- use the common PLC layer for shared engineering logic
-- apply only safe vendor recognition and terminology mapping
-- explicitly say when exact software behavior, instruction semantics, memory conventions, or tooling details still need official vendor confirmation
+When a Beckhoff / TwinCAT context is confirmed, read this file in addition to the common PLC rules:
 
-## Planned expansion
+1. `references/vendors/beckhoff/beckhoff-cheatsheet.md`
 
-This module should later add:
+## Key Focus Areas
 
-1. software/environment recognition
-2. terminology mapping
-3. program-organization norms
-4. debugging pitfalls
-5. official document index
-6. vendor examples/checklists
+- Understanding hardware linking via `AT %I*` and `AT %Q*`.
+- Leveraging advanced IEC 61131-3 features (OOP, Pointers, References).
+- Using Global Variable Lists (GVL) and Data Unit Types (DUT).
+- Avoiding critical runtime exceptions (Division by zero, Array Out of Bounds).
