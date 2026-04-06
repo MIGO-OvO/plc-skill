@@ -121,7 +121,7 @@ Aider can read files from the skill directory.
 **Usage:**
 ```bash
 # Add skill references to Aider's context
-aider --read ~/.openclaw/workspace/skills/plc-skill/references/vendors/siemens/siemens-s7-1200-1500-rules.md
+aider --read ~/.openclaw/workspace/skills/plc-skill/references/vendors/siemens/siemens-rules.md
 
 # Or add the entire skill directory
 aider --read-tree ~/.openclaw/workspace/skills/plc-skill/references/

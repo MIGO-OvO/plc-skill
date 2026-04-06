@@ -22,7 +22,7 @@ Use this file to choose the narrowest bundled reference area before relying on o
 ## Mitsubishi knowledge areas
 
 - vendor overview -> `references/vendors/mitsubishi/mitsubishi-overview.md`
-- FX3U platform boundaries -> `references/vendors/mitsubishi/mitsubishi-fx3u-rules.md`
+- FX3U platform boundaries -> `references/vendors/mitsubishi/mitsubishi-rules.md`
 - FX3U focus -> `references/vendors/mitsubishi/fx3u-focus.md`
 - FX3U device / instruction notes -> `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
 - GX Works2 structured project -> `references/vendors/mitsubishi/gxworks2-structured-project.md`

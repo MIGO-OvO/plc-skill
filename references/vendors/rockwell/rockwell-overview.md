@@ -17,7 +17,7 @@ This vendor module contains comprehensive rules for Logix 5000 controllers (Cont
 When a Rockwell context is confirmed, read these files in addition to the common PLC rules:
 
 1. `references/vendors/rockwell/rockwell-overview.md` (this file - context setting)
-2. `references/vendors/rockwell/rockwell-logix-rules.md` (core engineering rules)
+2. `references/vendors/rockwell/rockwell-rules.md` (core engineering rules)
 3. `references/vendors/rockwell/rockwell-st-programming-guide.md` (if ST programming is involved)
 4. `references/vendors/rockwell/rockwell-cheatsheet.md` (quick reference)
 5. `references/vendors/rockwell/official-doc-index.md` (for official manual citations)
@@ -132,10 +132,10 @@ Route to Rockwell module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Rockwell to another vendor (or vice versa), explicitly map the concepts:
-- Rockwell Task â†’ Siemens OB / Codesys Task
-- Rockwell AOI â†’ Siemens FB / Codesys Function Block
-- Rockwell Controller-Scoped Tag â†’ Siemens Global DB / Codesys GVL
-- Rockwell Program-Scoped Tag â†’ Siemens Instance DB / Codesys Program Variable
+- Rockwell Task â†?Siemens OB / Codesys Task
+- Rockwell AOI â†?Siemens FB / Codesys Function Block
+- Rockwell Controller-Scoped Tag â†?Siemens Global DB / Codesys GVL
+- Rockwell Program-Scoped Tag â†?Siemens Instance DB / Codesys Program Variable
 
 ---
 

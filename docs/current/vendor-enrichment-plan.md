@@ -20,7 +20,7 @@
 
 ### Documentation Structure
 - `official-doc-index.md` - Index of official manuals with download links/references
-- `<vendor>-<series>-rules.md` - Core programming rules (like mitsubishi-fx3u-rules.md)
+- `<vendor>-<series>-rules.md` - Core programming rules (like mitsubishi-rules.md)
 - `<vendor>-device-and-instruction-notes.md` - Memory model, addressing, instruction quirks
 - `<vendor>-project-structure.md` - IDE/software project organization
 - `<vendor>-structured-programming.md` - ST/FBD/SFC specifics for that platform

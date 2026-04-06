@@ -22,13 +22,11 @@ Read common files first:
 - `references/common/st-style-guide.md`
 - `references/common/output-format.md`
 
-If vendor-known, add the matching vendor files.
+If vendor-known, add the matching vendor files:
 
-For Mitsubishi FX3U + GX Works2 + ST, also read:
-
-- `references/vendors/mitsubishi/mitsubishi-fx3u-rules.md`
-- `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
-- `references/vendors/mitsubishi/gxworks2-structured-project-deep-notes.md`
+- `references/vendors/<vendor>/<vendor>-rules.md`
+- Any vendor-specific device/instruction notes
+- Any vendor-specific project structure guides
 
 ## 2. Explain existing code or logic
 
@@ -38,9 +36,7 @@ Read:
 - `references/common/scan-cycle-and-output-ownership.md`
 - `references/common/output-format.md`
 
-If the platform is Mitsubishi FX3U, add:
-
-- `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
+If vendor-known, add the vendor-specific device and instruction notes.
 
 ## 3. Review or refactor code
 
@@ -52,11 +48,7 @@ Read:
 - `references/common/alarm-and-interlock-patterns.md`
 - `references/common/output-format.md`
 
-If vendor-known, add the vendor project-organization notes.
-
-For Mitsubishi GX Works2 projects, add:
-
-- `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`
+If vendor-known, add the vendor project-organization and review pattern notes.
 
 ## 4. Debug or troubleshoot behavior
 

@@ -16,7 +16,7 @@ This vendor module contains comprehensive rules for Delta Electronics PLCs (DVP,
 When a Delta context is confirmed, read these files in addition to the common PLC rules:
 
 1. `references/vendors/delta/delta-overview.md` (this file - context setting)
-2. `references/vendors/delta/delta-dvp-rules.md` (core engineering rules)
+2. `references/vendors/delta/delta-rules.md` (core engineering rules)
 3. `references/vendors/delta/official-doc-index.md` (for official manual citations)
 
 ## Key Focus Areas
@@ -114,15 +114,15 @@ Delta's addressing system is heavily influenced by Mitsubishi:
 - Delta D registers are 16-bit by default; combine two for 32-bit operations
 
 ### WPLSoft vs. ISPSoft
-- If the user mentions DVP-ES, DVP-EX, DVP-SS â†’ likely WPLSoft
-- If the user mentions AH series, AS series, or IEC 61131-3 â†’ likely ISPSoft
+- If the user mentions DVP-ES, DVP-EX, DVP-SS â†?likely WPLSoft
+- If the user mentions AH series, AS series, or IEC 61131-3 â†?likely ISPSoft
 - If unsure, ask which software they are using
 
 ### Mixing Vendors
 If a user asks to migrate from Delta to another vendor (or vice versa), explicitly map the concepts:
-- Delta M â†’ Mitsubishi M / Siemens M / Rockwell Internal Bit
-- Delta D â†’ Mitsubishi D / Siemens DB / Rockwell Tag
-- Delta X/Y (octal) â†’ Mitsubishi X/Y (octal) / Siemens I/Q (decimal) / Rockwell I/O (decimal)
+- Delta M â†?Mitsubishi M / Siemens M / Rockwell Internal Bit
+- Delta D â†?Mitsubishi D / Siemens DB / Rockwell Tag
+- Delta X/Y (octal) â†?Mitsubishi X/Y (octal) / Siemens I/Q (decimal) / Rockwell I/O (decimal)
 
 ---
 

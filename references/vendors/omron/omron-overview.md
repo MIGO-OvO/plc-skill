@@ -16,7 +16,7 @@ This vendor module contains comprehensive rules for both modern Sysmac (NJ/NX se
 When an Omron context is confirmed, read these files in addition to the common PLC rules:
 
 1. `references/vendors/omron/omron-overview.md` (this file - context setting)
-2. `references/vendors/omron/omron-nj-nx-rules.md` (for Sysmac NJ/NX series)
+2. `references/vendors/omron/omron-rules.md` (for Sysmac NJ/NX series)
 3. `references/vendors/omron/omron-cheatsheet.md` (quick reference)
 4. `references/vendors/omron/official-doc-index.md` (for official manual citations)
 
@@ -125,16 +125,16 @@ Route to Omron module when any of these cues are present:
 ### Sysmac vs. Legacy
 When a user mentions "Omron PLC" without specifying the series:
 - Ask which platform (Sysmac NJ/NX or legacy CJ/CS/CP)
-- If they mention Sysmac Studio â†’ Sysmac (NJ/NX)
-- If they mention CX-Programmer â†’ Legacy (CJ/CS/CP)
-- If they mention motion control or EtherCAT â†’ Likely Sysmac
+- If they mention Sysmac Studio â†?Sysmac (NJ/NX)
+- If they mention CX-Programmer â†?Legacy (CJ/CS/CP)
+- If they mention motion control or EtherCAT â†?Likely Sysmac
 
 ### Mixing Vendors
 If a user asks to migrate from Omron to another vendor (or vice versa), explicitly map the concepts:
-- Omron Global Variable â†’ Siemens Global DB / Rockwell Controller-Scoped Tag
-- Omron Primary Periodic Task â†’ Siemens OB1 / Rockwell Continuous Task
-- Omron FB Instance â†’ Siemens FB Instance / Rockwell AOI Instance
-- Omron CIO/D/W (legacy) â†’ Mitsubishi D/M devices / Siemens DB
+- Omron Global Variable â†?Siemens Global DB / Rockwell Controller-Scoped Tag
+- Omron Primary Periodic Task â†?Siemens OB1 / Rockwell Continuous Task
+- Omron FB Instance â†?Siemens FB Instance / Rockwell AOI Instance
+- Omron CIO/D/W (legacy) â†?Mitsubishi D/M devices / Siemens DB
 
 ---
 

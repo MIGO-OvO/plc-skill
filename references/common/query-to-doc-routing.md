@@ -42,7 +42,7 @@ Use this file to map question types to the right bundled references.
 
 - FX3U devices, timers, counters, relays, registers, or instruction behavior
   - `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
-  - `references/vendors/mitsubishi/mitsubishi-fx3u-rules.md`
+  - `references/vendors/mitsubishi/mitsubishi-rules.md`
 
 - GX Works2 structured project organization, module split, or maintainability
   - `references/vendors/mitsubishi/gxworks2-structured-project.md`

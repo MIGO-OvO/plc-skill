@@ -35,7 +35,7 @@ When any of the following cues are present, route the request to the Siemens ven
 When a Siemens context is confirmed, load the following files in order:
 
 1. `references/vendors/siemens/siemens-overview.md` (Context setting)
-2. `references/vendors/siemens/siemens-s7-1200-1500-rules.md` (Core engineering rules)
+2. `references/vendors/siemens/siemens-rules.md` (Core engineering rules)
 3. `references/vendors/siemens/siemens-project-structure.md` (Program organization)
 4. `references/vendors/siemens/siemens-device-and-instruction-notes.md` (Addressing and instructions)
 5. `references/vendors/siemens/siemens-st-programming-guide.md` (If request involves ST/SCL programming)

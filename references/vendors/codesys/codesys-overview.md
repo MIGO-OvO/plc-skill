@@ -17,7 +17,7 @@ This vendor module contains comprehensive rules for Codesys V3, the widely-used 
 When a Codesys context is confirmed, read these files in addition to the common PLC rules:
 
 1. `references/vendors/codesys/codesys-overview.md` (this file - context setting)
-2. `references/vendors/codesys/codesys-v3-rules.md` (core engineering rules)
+2. `references/vendors/codesys/codesys-rules.md` (core engineering rules)
 3. `references/vendors/codesys/official-doc-index.md` (for official manual citations)
 
 ## Key Focus Areas
@@ -119,10 +119,10 @@ Route to Codesys module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Codesys to another vendor (or vice versa), explicitly map the concepts:
-- Codesys GVL â†’ Siemens Global DB / Rockwell Controller-Scoped Tag
-- Codesys FB with Methods â†’ Siemens FB / Rockwell AOI
-- Codesys DUT â†’ Siemens UDT / Rockwell UDT
-- Codesys Task â†’ Siemens OB / Rockwell Task
+- Codesys GVL â†?Siemens Global DB / Rockwell Controller-Scoped Tag
+- Codesys FB with Methods â†?Siemens FB / Rockwell AOI
+- Codesys DUT â†?Siemens UDT / Rockwell UDT
+- Codesys Task â†?Siemens OB / Rockwell Task
 
 ---
 

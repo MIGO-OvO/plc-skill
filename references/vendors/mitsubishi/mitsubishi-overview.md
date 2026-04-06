@@ -29,7 +29,7 @@ Do not pretend all Mitsubishi families are covered at the same depth.
 
 For Mitsubishi requests, start with:
 
-- `references/vendors/mitsubishi/mitsubishi-fx3u-rules.md` when the work is FX3U-centric
+- `references/vendors/mitsubishi/mitsubishi-rules.md` when the work is FX3U-centric
 - `references/vendors/mitsubishi/fx3u-focus.md` for FX3U task framing
 - `references/vendors/mitsubishi/gxworks2-structured-project.md` for project organization
 - `references/vendors/mitsubishi/official-doc-index.md` for official evidence routing

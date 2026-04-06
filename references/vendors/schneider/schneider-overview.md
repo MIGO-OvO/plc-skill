@@ -17,7 +17,7 @@ This vendor module contains comprehensive rules for Modicon PACs (M580, M340, Pr
 When a Schneider context is confirmed, read these files in addition to the common PLC rules:
 
 1. `references/vendors/schneider/schneider-overview.md` (this file - context setting)
-2. `references/vendors/schneider/schneider-modicon-rules.md` (core engineering rules)
+2. `references/vendors/schneider/schneider-rules.md` (core engineering rules)
 3. `references/vendors/schneider/official-doc-index.md` (for official manual citations)
 
 ## Key Focus Areas
@@ -105,10 +105,10 @@ If the user specifies M241, M251, M262, or Machine Expert/SoMachine, route them 
 
 ### Mixing Vendors
 If a user asks to migrate from Schneider to another vendor (or vice versa), explicitly map the concepts:
-- Schneider MAST Task â†’ Siemens OB1 / Rockwell Continuous Task
-- Schneider DFB â†’ Siemens FB / Rockwell AOI
-- Schneider DDT â†’ Siemens UDT / Rockwell UDT
-- Schneider `%MW` â†’ Siemens DB / Mitsubishi `D` registers
+- Schneider MAST Task â†?Siemens OB1 / Rockwell Continuous Task
+- Schneider DFB â†?Siemens FB / Rockwell AOI
+- Schneider DDT â†?Siemens UDT / Rockwell UDT
+- Schneider `%MW` â†?Siemens DB / Mitsubishi `D` registers
 
 ---
 

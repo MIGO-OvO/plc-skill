@@ -16,7 +16,7 @@ This vendor module contains comprehensive rules for Keyence KV-series PLCs and K
 When a Keyence context is confirmed, read these files in addition to the common PLC rules:
 
 1. `references/vendors/keyence/keyence-overview.md` (this file - context setting)
-2. `references/vendors/keyence/keyence-kv-rules.md` (core engineering rules)
+2. `references/vendors/keyence/keyence-rules.md` (core engineering rules)
 3. `references/vendors/keyence/official-doc-index.md` (for official manual citations)
 
 ## Key Focus Areas
@@ -91,10 +91,10 @@ Route to Keyence module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Keyence to another vendor (or vice versa), explicitly map the concepts:
-- Keyence Script â†’ Siemens SCL / Rockwell ST / Codesys ST
-- Keyence Symbol â†’ Rockwell Tag / Codesys Variable
-- Keyence Machine Operation Recorder â†’ Siemens Trace / Rockwell Trend (though Keyence's is more deeply integrated by default)
-- Keyence R/DM (legacy addressing) â†’ Mitsubishi M/D / Omron CIO/D
+- Keyence Script â†?Siemens SCL / Rockwell ST / Codesys ST
+- Keyence Symbol â†?Rockwell Tag / Codesys Variable
+- Keyence Machine Operation Recorder â†?Siemens Trace / Rockwell Trend (though Keyence's is more deeply integrated by default)
+- Keyence R/DM (legacy addressing) â†?Mitsubishi M/D / Omron CIO/D
 
 ---
 
