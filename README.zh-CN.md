@@ -1,6 +1,6 @@
 # PLC_SKILL
 
-> 一个具有**通用层 + 品牌特化层**清晰分层的 PLC 工程 Skill。它能处理跨品牌 PLC 共性问题，同时保留更深的品牌特化模块；当前最成熟的特化模块仍然是 **Mitsubishi FX3U / GX Works2 / Structured Project / ST**。
+> 一个具有**通用层 + 品牌特化层**清晰分层的 PLC 工程 Skill。它能处理跨品牌 PLC 共性问题，同时为 **西门子、罗克韦尔、欧姆龙、施耐德、倍福、科德斯、三菱、台达、基恩士、松下** 十大主流厂商提供深度的专有工程规则和官方文档路由。
 
 [Read the primary English README / 阅读英文主文档](./README.md)
 
@@ -45,25 +45,26 @@
 
 | 层 / 模块 | 状态 |
 | --- | --- |
-| 通用 PLC 层 | 已启用 |
-| Mitsubishi 模块 | 成熟 |
-| Siemens 模块 | 已预留骨架 |
-| Omron 模块 | 已预留骨架 |
-| Rockwell / Allen-Bradley 模块 | 已预留骨架 |
-| Schneider 模块 | 已预留骨架 |
-| Delta 模块 | 已预留骨架 |
-| Keyence 模块 | 已预留骨架 |
-| Panasonic 模块 | 已预留骨架 |
-| Beckhoff 模块 | 已预留骨架 |
-| Codesys 模块 | 已预留骨架 |
+| 通用 PLC 层 (含硬件解耦、HMI交互规范、IDE导入导出等) | 成熟 |
+| Siemens 西门子模块 | 成熟 |
+| Rockwell / Allen-Bradley 罗克韦尔模块 | 成熟 |
+| Omron 欧姆龙模块 | 成熟 |
+| Schneider 施耐德模块 | 成熟 |
+| Beckhoff 倍福模块 | 成熟 |
+| Codesys 科德斯模块 | 成熟 |
+| Mitsubishi 三菱模块 | 成熟 |
+| Delta 台达模块 | 成熟 |
+| Keyence 基恩士模块 | 成熟 |
+| Panasonic 松下模块 | 成熟 |
 
 ## 仓库结构
 
 ```text
 PLC_SKILL/
 ├─ SKILL.md
+├─ INSTALL.md (跨平台 AI 编程工具安装与配置指南)
 ├─ references/
-│  ├─ common/
+│  ├─ common/ (含 IDE 格式导出、HMI 交互模式、硬件抽象映射等工程实战经验)
 │  ├─ vendors/
 │  │  ├─ mitsubishi/
 │  │  ├─ siemens/
@@ -85,6 +86,20 @@ PLC_SKILL/
 └─ docs/
 ```
 
+## 安装
+
+你可以通过 [ClawHub CLI](https://clawhub.com/) 轻松安装此技能：
+
+```bash
+# 如果尚未安装，请先安装 ClawHub
+npm install -g clawhub
+
+# 一键安装 PLC 技能
+clawhub install plc-skill
+```
+
+关于如何手动安装，或在 Cursor、Claude Code、Opencode 等 AI 编程工具中配置该技能，请查看详细的 [INSTALL.md](INSTALL.md) 指南。
+
 ## 路由方式
 
 Skill 的行为应遵循这个顺序：
@@ -97,16 +112,19 @@ Skill 的行为应遵循这个顺序：
 
 ## 当前最深特化
 
-原有的三菱积累已被完整保留，并作为第一个成熟品牌模块存在，重点支持：
-
-- Mitsubishi FX3U
-- GX Works2
-- Structured Project
-- Structured Text (ST)
+虽然本项目起源于三菱（FX3U / GX Works2 / ST），但现在已经为全球十大主流品牌建立并完善了深度特化模块。这包括：
+- 西门子 (TIA Portal / S7-1200/1500)
+- 罗克韦尔 (Studio 5000 / Logix 5000)
+- 欧姆龙 (Sysmac Studio / CX-One)
+- 施耐德 (Control Expert / Modicon)
+- 倍福 (TwinCAT 3)
+- 科德斯 (Codesys V3.5)
+- 三菱 (GX Works2 / FX3U)
+- 台达、基恩士、松下
 
 ## 知识组织方式
 
-- `references/common/` -> 通用 PLC 工程规则
+- `references/common/` -> 通用 PLC 工程规则（包括 I/O 硬件解耦映射、HMI 报警及握手交互模式、版本控制代码审查方案、跨平台 IDE 格式导出、以及老手避坑指南）
 - `references/vendors/<vendor>/` -> 各品牌特化规则与官方资料入口
 - `templates/common/` -> 通用控制模板
 - `examples/common/` -> 通用示例与触发样例

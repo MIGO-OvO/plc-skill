@@ -41,17 +41,17 @@ This skill is designed to satisfy four constraints at once:
 
 | Layer / module | Status |
 | --- | --- |
-| Common PLC layer | Active |
+| Common PLC layer | Mature |
 | Mitsubishi module | Mature |
-| Siemens module | Scaffolded |
-| Omron module | Scaffolded |
-| Rockwell / Allen-Bradley module | Scaffolded |
-| Schneider module | Scaffolded |
-| Delta module | Scaffolded |
-| Keyence module | Scaffolded |
-| Panasonic module | Scaffolded |
-| Beckhoff module | Scaffolded |
-| Codesys module | Scaffolded |
+| Siemens module | Mature |
+| Rockwell / Allen-Bradley module | Mature |
+| Omron module | Mature |
+| Schneider module | Mature |
+| Beckhoff module | Mature |
+| Codesys module | Mature |
+| Delta module | Mature |
+| Keyence module | Mature |
+| Panasonic module | Mature |
 
 ## Repository structure
 
@@ -107,16 +107,20 @@ The skill should behave like this:
 
 ## Current deepest specialization
 
-The original Mitsubishi accumulation has been preserved as the first mature vendor module, especially for:
+The skill now maintains mature vendor modules across the industry. While it started with Mitsubishi, it now provides deep, vendor-specific engineering rules for:
 
-- Mitsubishi FX3U
-- GX Works2
-- Structured Project
-- Structured Text (ST)
+- Siemens (S7-1200/1500, TIA Portal)
+- Rockwell Automation / Allen-Bradley (Logix 5000)
+- Omron (Sysmac NJ/NX, CX-One)
+- Schneider Electric (Modicon M580/M340, Control Expert)
+- Beckhoff (TwinCAT 3)
+- Codesys (V3)
+- Mitsubishi (FX3U, GX Works2)
+- Delta, Keyence, Panasonic
 
 ## Knowledge organization
 
-- `references/common/` -> cross-vendor PLC engineering rules
+- `references/common/` -> cross-vendor PLC engineering rules (including HMI patterns, hardware abstraction, IDE integration formats, version control, and vendor pitfalls)
 - `references/vendors/<vendor>/` -> vendor-specific rules and official-doc routing
 - `templates/common/` -> reusable control patterns
 - `examples/common/` -> cross-vendor examples and trigger samples
