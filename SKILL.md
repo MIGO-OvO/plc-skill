@@ -180,7 +180,7 @@ Routing:
 Mitsubishi:
 
 - `references/vendors/mitsubishi/mitsubishi-overview.md`
-- `references/vendors/mitsubishi/mitsubishi-fx3u-rules.md`
+- `references/vendors/mitsubishi/mitsubishi-rules.md`
 - `references/vendors/mitsubishi/fx3u-focus.md`
 - `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
 - `references/vendors/mitsubishi/gxworks2-structured-project.md`
@@ -192,47 +192,47 @@ Mature vendor modules:
 
 Siemens:
 - `references/vendors/siemens/siemens-overview.md`
-- `references/vendors/siemens/siemens-s7-1200-1500-rules.md`
+- `references/vendors/siemens/siemens-rules.md`
 - `references/vendors/siemens/siemens-st-programming-guide.md`
 - `references/vendors/siemens/official-doc-index.md`
 
 Rockwell / Allen-Bradley:
 - `references/vendors/rockwell/rockwell-overview.md`
-- `references/vendors/rockwell/rockwell-logix-rules.md`
+- `references/vendors/rockwell/rockwell-rules.md`
 - `references/vendors/rockwell/rockwell-st-programming-guide.md`
 - `references/vendors/rockwell/official-doc-index.md`
 
 Omron:
 - `references/vendors/omron/omron-overview.md`
-- `references/vendors/omron/omron-nj-nx-rules.md`
+- `references/vendors/omron/omron-rules.md`
 - `references/vendors/omron/official-doc-index.md`
 
 Schneider:
 - `references/vendors/schneider/schneider-overview.md`
-- `references/vendors/schneider/schneider-modicon-rules.md`
+- `references/vendors/schneider/schneider-rules.md`
 - `references/vendors/schneider/official-doc-index.md`
 
 Beckhoff:
 - `references/vendors/beckhoff/beckhoff-overview.md`
-- `references/vendors/beckhoff/beckhoff-twincat-rules.md`
+- `references/vendors/beckhoff/beckhoff-rules.md`
 - `references/vendors/beckhoff/official-doc-index.md`
 
 Codesys:
 - `references/vendors/codesys/codesys-overview.md`
-- `references/vendors/codesys/codesys-v3-rules.md`
+- `references/vendors/codesys/codesys-rules.md`
 - `references/vendors/codesys/official-doc-index.md`
 
 Delta:
 - `references/vendors/delta/delta-overview.md`
-- `references/vendors/delta/delta-dvp-rules.md`
+- `references/vendors/delta/delta-rules.md`
 - `references/vendors/delta/official-doc-index.md`
 
 Keyence:
 - `references/vendors/keyence/keyence-overview.md`
-- `references/vendors/keyence/keyence-kv-rules.md`
+- `references/vendors/keyence/keyence-rules.md`
 - `references/vendors/keyence/official-doc-index.md`
 
 Panasonic:
 - `references/vendors/panasonic/panasonic-overview.md`
-- `references/vendors/panasonic/panasonic-fpwin-rules.md`
+- `references/vendors/panasonic/panasonic-rules.md`
 - `references/vendors/panasonic/official-doc-index.md`
