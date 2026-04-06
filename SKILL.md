@@ -151,7 +151,9 @@ Common:
 - `references/common/glossary.md`
 - `references/common/plcopen-and-iec-notes.md`
 - `references/common/st-style-guide.md`
-- `references/common/st-output-style.md`
+- `references/common/ld-style-guide.md`
+- `references/common/fbd-style-guide.md`
+- `references/common/logic-output-style.md`
 - `references/common/program-templates.md`
 - `references/common/alarm-and-interlock-patterns.md`
 - `references/common/scan-cycle-and-output-ownership.md`
