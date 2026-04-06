@@ -36,6 +36,11 @@ Route to Siemens when cues include:
 - S7-1200, S7-1500, S7-300, S7-400
 - OB / FB / FC / DB terminology
 
+Read:
+
+- `references/vendors/siemens/siemens-overview.md`
+- `references/vendors/siemens/siemens-rules.md`
+
 ### Omron
 
 Route to Omron when cues include:
@@ -43,6 +48,11 @@ Route to Omron when cues include:
 - Omron
 - CX-Programmer, Sysmac Studio
 - CP, CJ, CS, NJ, NX
+
+Read:
+
+- `references/vendors/omron/omron-overview.md`
+- `references/vendors/omron/omron-rules.md`
 
 ### Rockwell / Allen-Bradley
 
@@ -52,6 +62,11 @@ Route to Rockwell when cues include:
 - RSLogix, Studio 5000, Logix Designer
 - ControlLogix, CompactLogix, MicroLogix
 
+Read:
+
+- `references/vendors/rockwell/rockwell-overview.md`
+- `references/vendors/rockwell/rockwell-rules.md`
+
 ### Schneider
 
 Route to Schneider when cues include:
@@ -59,6 +74,11 @@ Route to Schneider when cues include:
 - Schneider, Modicon
 - EcoStruxure, Unity Pro, Control Expert
 - M221, M241, M251, M340, M580
+
+Read:
+
+- `references/vendors/schneider/schneider-overview.md`
+- `references/vendors/schneider/schneider-rules.md`
 
 ### Delta
 
@@ -68,6 +88,11 @@ Route to Delta when cues include:
 - WPLSoft, ISPSoft
 - DVP, AS series, AH series
 
+Read:
+
+- `references/vendors/delta/delta-overview.md`
+- `references/vendors/delta/delta-rules.md`
+
 ### Keyence
 
 Route to Keyence when cues include:
@@ -75,6 +100,11 @@ Route to Keyence when cues include:
 - Keyence
 - KV Studio
 - KV series
+
+Read:
+
+- `references/vendors/keyence/keyence-overview.md`
+- `references/vendors/keyence/keyence-rules.md`
 
 ### Panasonic
 
@@ -84,6 +114,11 @@ Route to Panasonic when cues include:
 - FPWIN, Control FPWIN
 - FP series
 
+Read:
+
+- `references/vendors/panasonic/panasonic-overview.md`
+- `references/vendors/panasonic/panasonic-rules.md`
+
 ### Beckhoff
 
 Route to Beckhoff when cues include:
@@ -92,6 +127,11 @@ Route to Beckhoff when cues include:
 - TwinCAT
 - PLC project in TwinCAT ecosystem
 
+Read:
+
+- `references/vendors/beckhoff/beckhoff-overview.md`
+- `references/vendors/beckhoff/beckhoff-rules.md`
+
 ### Codesys
 
 Route to Codesys when cues include:
@@ -99,6 +139,11 @@ Route to Codesys when cues include:
 - CODESYS, Codesys
 - SoftPLC / runtime wording tied to Codesys ecosystem
 - IEC-tag oriented environment with explicit Codesys runtime mention
+
+Read:
+
+- `references/vendors/codesys/codesys-overview.md`
+- `references/vendors/codesys/codesys-rules.md`
 
 ## Mixed-vendor warning rule
 
