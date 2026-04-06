@@ -1,6 +1,16 @@
 ---
 name: plc-skill
 description: General PLC development, explanation, review, refactoring, debugging, and troubleshooting skill across IEC 61131-3 style industrial control work. Use when the request involves PLC logic, sequence control, state machines, alarms, interlocks, timers, counters, I/O mapping, Structured Text (ST), Ladder Diagram (LD), Function Block Diagram (FBD), Sequential Function Chart (SFC), program structure, code review, maintainability, or commissioning/debugging. Route through the common PLC layer first, then prefer the matching vendor path when the user mentions Mitsubishi, Siemens, Omron, Allen-Bradley/Rockwell, Schneider, Delta, Keyence, Panasonic, Beckhoff, or Codesys ecosystems, software, CPU families, device models, or vendor-specific terminology. Do not prefer this skill for generic electronics, pure wiring-only work without logic context, broad industrial networking without control-program context, or high-confidence safety conclusions without confirmed field conditions.
+metadata:
+  {
+    "openclaw":
+      {
+        "requires": { "bins": ["openclaw"] }
+      },
+    "version": "1.0.0",
+    "author": "OpenClaw Community",
+    "tags": ["plc", "iec61131-3", "st", "ladder", "siemens", "rockwell", "mitsubishi", "omron", "codesys", "beckhoff", "schneider", "delta", "keyence", "panasonic"]
+  }
 ---
 
 # PLC Skill
@@ -152,6 +162,11 @@ Common:
 - `references/common/response-fallback-rules.md`
 - `references/common/output-format.md`
 - `references/common/safety-boundaries.md`
+- `references/common/ide-integration-formats.md`
+- `references/common/hmi-interface-patterns.md`
+- `references/common/hardware-abstraction-mapping.md`
+- `references/common/vendor-pitfalls-and-pro-tips.md`
+- `references/common/version-control-and-code-review.md`
 
 Routing:
 
@@ -171,14 +186,51 @@ Mitsubishi:
 - `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`
 - `references/vendors/mitsubishi/official-doc-index.md`
 
-Stub vendor modules:
+Mature vendor modules:
 
+Siemens:
 - `references/vendors/siemens/siemens-overview.md`
-- `references/vendors/omron/omron-overview.md`
+- `references/vendors/siemens/siemens-s7-1200-1500-rules.md`
+- `references/vendors/siemens/siemens-st-programming-guide.md`
+- `references/vendors/siemens/official-doc-index.md`
+
+Rockwell / Allen-Bradley:
 - `references/vendors/rockwell/rockwell-overview.md`
+- `references/vendors/rockwell/rockwell-logix-rules.md`
+- `references/vendors/rockwell/rockwell-st-programming-guide.md`
+- `references/vendors/rockwell/official-doc-index.md`
+
+Omron:
+- `references/vendors/omron/omron-overview.md`
+- `references/vendors/omron/omron-nj-nx-rules.md`
+- `references/vendors/omron/official-doc-index.md`
+
+Schneider:
 - `references/vendors/schneider/schneider-overview.md`
-- `references/vendors/delta/delta-overview.md`
-- `references/vendors/keyence/keyence-overview.md`
-- `references/vendors/panasonic/panasonic-overview.md`
+- `references/vendors/schneider/schneider-modicon-rules.md`
+- `references/vendors/schneider/official-doc-index.md`
+
+Beckhoff:
 - `references/vendors/beckhoff/beckhoff-overview.md`
+- `references/vendors/beckhoff/beckhoff-twincat-rules.md`
+- `references/vendors/beckhoff/official-doc-index.md`
+
+Codesys:
 - `references/vendors/codesys/codesys-overview.md`
+- `references/vendors/codesys/codesys-v3-rules.md`
+- `references/vendors/codesys/official-doc-index.md`
+
+Delta:
+- `references/vendors/delta/delta-overview.md`
+- `references/vendors/delta/delta-dvp-rules.md`
+- `references/vendors/delta/official-doc-index.md`
+
+Keyence:
+- `references/vendors/keyence/keyence-overview.md`
+- `references/vendors/keyence/keyence-kv-rules.md`
+- `references/vendors/keyence/official-doc-index.md`
+
+Panasonic:
+- `references/vendors/panasonic/panasonic-overview.md`
+- `references/vendors/panasonic/panasonic-fpwin-rules.md`
+- `references/vendors/panasonic/official-doc-index.md`

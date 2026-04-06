@@ -81,6 +81,20 @@ PLC_SKILL/
 └─ docs/
 ```
 
+## Installation
+
+You can install this skill easily using the [ClawHub CLI](https://clawhub.com/):
+
+```bash
+# Install ClawHub if you haven't already
+npm install -g clawhub
+
+# Install the PLC Skill
+clawhub install plc-skill
+```
+
+For manual installation or usage with tools like Cursor, Claude Code, or Opencode, see the [INSTALL.md](INSTALL.md) guide.
+
 ## Routing model
 
 The skill should behave like this:
