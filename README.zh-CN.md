@@ -50,13 +50,16 @@ PLC_SKILL/
 
 ## 安装与接入
 
-### 在 OpenClaw 中使用 (通过 ClawHub)
-最快捷的安装方式是使用 [ClawHub CLI](https://clawhub.com/)：
+### 在 Oh My OpenCode 中使用 (推荐)
+本 Skill 专为 Oh My OpenCode 代理框架原生设计。
 
+1. 克隆本仓库到本地：
 ```bash
-npm install -g clawhub
-clawhub install plc-skill
+git clone https://github.com/YOUR_USERNAME/plc-skill.git
+cd plc-skill
 ```
+
+2. 在您的 OpenCode 配置中注册此 skill。
 
 ### 在其他工具中使用 (Cursor, Claude Code 等)
 请查看 [INSTALL.md](./INSTALL.md)，了解如何在您喜欢的 AI 编程环境中配置和使用此技能。

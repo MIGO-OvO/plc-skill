@@ -50,13 +50,16 @@ PLC_SKILL/
 
 ## Installation & Setup
 
-### For OpenClaw (via ClawHub)
-The fastest way to install is using the [ClawHub CLI](https://clawhub.com/):
+### Using Oh My OpenCode (Recommended)
+This skill is designed to work natively with the Oh My OpenCode agent framework.
 
+1. Clone this repository to your local machine:
 ```bash
-npm install -g clawhub
-clawhub install plc-skill
+git clone https://github.com/YOUR_USERNAME/plc-skill.git
+cd plc-skill
 ```
+
+2. Register the skill in your OpenCode configuration.
 
 ### For other tools (Cursor, Claude Code, etc.)
 See the [INSTALL.md](./INSTALL.md) for detailed instructions on configuring this skill in your preferred AI programming environment.
