@@ -1,0 +1,45 @@
+{
+  "name": "plc-skill",
+  "version": "1.0.0",
+  "description": "> 生产级的工业控制编程 AI Agent 技能。采用“通用工程 + 品牌特化”的双层架构，既能处理通用的 IEC 61131-3 逻辑，又能为西门子、罗克韦尔、三菱、欧姆龙等主流 PLC 品牌提供深度、准确的路由和规范。",
+  "scripts": {
+    "postinstall": "echo \"\\n\\033[32mPlease run 'install-plc-skill' to finish setting up the skill in your ~/.agents directory.\\033[0m\\n\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "install-plc-skill": "./bin/install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MIGO-OvO/plc-skill.git"
+  },
+  "keywords": [
+    "agent-skills",
+    "openclaw",
+    "opencode",
+    "claude-code",
+    "plc"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MIGO-OvO/plc-skill/issues"
+  },
+  "homepage": "https://github.com/MIGO-OvO/plc-skill#readme",
+  "devDependencies": {
+    "skills": "^1.4.9"
+  },
+  "dependencies": {
+    "yaml": "^2.8.3"
+  },
+  "files": [
+    "SKILL.md",
+    "docs/",
+    "examples/",
+    "evals/",
+    "references/",
+    "templates/",
+    "bin/"
+  ]
+}
