@@ -1,6 +1,17 @@
 # Testing and Evaluations Guide
 
-Welcome to the `plc-skill` testing and evaluations guide. This document explains how our regression test suite operates and provides instructions for developers to ensure changes do not degrade the skill's performance.
+Welcome to the `plc-skill` testing and evaluations guide. This document explains how repository verification and eval case review work together to reduce regressions.
+
+## Two Validation Layers
+
+We use two complementary validation layers:
+
+1. **Repository verification (`npm test`)**
+   - Checks internal markdown references.
+   - Checks for placeholder text left in user-facing docs.
+   - Checks `package.json` and `package-lock.json` root metadata consistency.
+2. **Prompt/eval case review (`evals/*.md`)**
+   - Defines the expected agent behavior for generation, routing, review, debugging, and safety-boundary cases.
 
 ## Purpose of Evals
 
@@ -13,7 +24,7 @@ The evaluation suite acts as a lightweight regression matrix designed to maintai
 
 ## The Eval Matrix (`eval-matrix.md`)
 
-The core of our testing framework lives in `evals/eval-matrix.md`. This matrix categorizes our test cases across five primary domains:
+The core of our prompt evaluation framework lives in `evals/eval-matrix.md`. This matrix categorizes our test cases across five primary domains:
 
 1.  **Generation**: Creating new PLC code, logic blocks, and architectures from natural language prompts.
 2.  **Explanation**: Breaking down and accurately describing existing logic routines or tag structures to the user.
@@ -41,9 +52,10 @@ IEC 61131-3 languages each have unique pitfalls and paradigms. Our language-spec
 
 ## Checklist for Contributors
 
-Before submitting a Pull Request or accepting a major edit to the skill, you must verify your changes against the core regression suite. 
+Before submitting a Pull Request or accepting a major edit to the skill, verify both the repository checks and the relevant eval cases.
 
 **Minimum Regression Checklist:**
+- [ ] **Repository Verification**: Run `npm test` and resolve broken links, placeholder text, and package metadata drift.
 - [ ] **Conservative Behavior Check**: Verify the skill still refuses to guess hardware mapping or bypass safety interlocks when information is missing.
 - [ ] **Vendor Syntax Verification**: Run generation cases for at least one major vendor (Siemens, Rockwell, or Mitsubishi) to confirm addressing formats remain strictly compliant.
 - [ ] **Language Anti-Pattern Check**: Validate that generated Ladder Diagram logic does not exhibit multiple-coil syndrome or unsafe latching conditions.

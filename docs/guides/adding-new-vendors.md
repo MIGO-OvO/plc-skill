@@ -26,7 +26,7 @@ For every new vendor, create a new directory under `references/vendors/[vendor-n
 - [ ] **`[vendor]-cheatsheet.md`**
   - A quick-reference guide (2-3KB) for commonly used instructions, data type conversions, standard timers/counters, and memory addressing formats (e.g., Siemens `DB` vs Mitsubishi `D` vs Rockwell tags).
 - [ ] **`official-doc-index.md`**
-  - An index of official manuals (hardware, programming, instructions) with download links or references to the `docs/PLC_SKILL_KB/` directory.
+  - An index of official manuals (hardware, programming, instructions) with stable official links or repository-local notes when an official URL is not practical.
 
 ### Deep-Dive Architectural Notes (Optional but Recommended)
 For complex platforms (like Omron Sysmac or Beckhoff TwinCAT), consider adding deep-dive notes explaining their specific project structuring, task allocation, or OOP paradigms.

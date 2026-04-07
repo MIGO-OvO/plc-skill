@@ -1,26 +1,28 @@
 # Mitsubishi official document index
 
-Use this file to route Mitsubishi requests to the closest official material already bundled in the skill.
+Use this file to route Mitsubishi requests to the closest official material.
+
+This repository does not assume a bundled local PDF mirror. Prefer Mitsubishi Electric's official manual portal or the local manuals already available in your project environment.
 
 ## GX Works2 structured project
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/gxworks2_structured_project/mitsubishielectric__gxworks2__structured_project__beginners_manual__en__jy997d16801.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/gxworks2_structured_project/mitsubishielectric__gxworks2__structured_project__programming_manual__en__jy997d40901e.pdf`
+- GX Works2 Structured Project Beginner's Manual (`JY997D16801`)
+- GX Works2 Structured Project Programming Manual (`JY997D40901`)
 
 ## FX CPU structured programming
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_basic_applied_instruction__en__jy997d36701.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_device_common__en__jy997d16701.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fxcpu_structured_programming/mitsubishielectric__fxcpu__structured_programming_manual_application_functions__en__jy997d37801e.pdf`
+- FXCPU Structured Programming Manual - Basic & Applied Instruction (`JY997D36701`)
+- FXCPU Structured Programming Manual - Device & Common (`JY997D16701`)
+- FXCPU Structured Programming Manual - Application Functions (`JY997D37801`)
 
 ## FX3U programming and hardware
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fx_series_programming/mitsubishielectric__fx3u__programming_manual_basic_applied_instructions__en__jy997d16601.pdf`
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/fx3u_hardware/mitsubishielectric__fx3u__hardware_manual__en__jy997d15401e.pdf`
+- FX3U Programming Manual - Basic & Applied Instructions (`JY997D16601`)
+- FX3U Hardware Manual (`JY997D15401`)
 
 ## Communication / special modules
 
-- `docs/PLC_SKILL_KB/01_vendor_mitsubishi/communication_and_special_modules/mitsubishielectric__fx3u_enet_adp__ethernet_adapter_manual__en__jy997d26201.pdf`
+- FX3U-ENET-ADP Ethernet Adapter Manual (`JY997D26201`)
 
 ## Usage rule
 

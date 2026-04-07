@@ -1,56 +1,56 @@
-﻿# Template map
+# Template map
 
 Use this file to choose the nearest reusable template before writing a large custom answer.
 
 ## Common template selection
 
 - Standard equipment module (Auto/Manual/Fault handling)
-  - 	emplates/common/equipment-module-template.md
+  - `templates/common/equipment-module-template.md`
 
 - Start / stop motor or actuator control
-  - 	emplates/common/start-stop-interlock-template.md
+  - `templates/common/start-stop-interlock-template.md`
 
 - Sequence flow with explicit steps
-  - 	emplates/common/sequence-step-template.md
+  - `templates/common/sequence-step-template.md`
 
 - Advanced sequence flow (Pause / Resume / Abort handling)
-  - 	emplates/common/pause-resume-sequence-template.md
+  - `templates/common/pause-resume-sequence-template.md`
 
 - State-based machine control
-  - 	emplates/common/state-machine-template.md
+  - `templates/common/state-machine-template.md`
 
 - Alarm latch, hold, and reset behavior
-  - 	emplates/common/alarm-latch-reset-template.md
+  - `templates/common/alarm-latch-reset-template.md`
 
 - Alarm/interlock module design
-  - 	emplates/common/alarm-interlock-module-template.md
+  - `templates/common/alarm-interlock-module-template.md`
 
 - Timer / counter diagnosis
-  - 	emplates/common/timer-counter-diagnostic-template.md
+  - `templates/common/timer-counter-diagnostic-template.md`
 
 - Output ownership review
-  - 	emplates/common/output-ownership-review-template.md
+  - `templates/common/output-ownership-review-template.md`
 
 - Analog scaling, fault detection, limit clamping
-  - 	emplates/common/analog-scaling-template.md
+  - `templates/common/analog-scaling-template.md`
 
 - Signal filtering, digital debounce, analog smoothing
-  - 	emplates/common/debounce-filter-template.md
+  - `templates/common/debounce-filter-template.md`
 
 - Process control loops, PID wrapper, Auto/Manual bumpless
-  - 	emplates/common/pid-control-template.md
+  - `templates/common/pid-control-template.md`
 
 - One-shot logic, edge detection, R_TRIG/F_TRIG patterns
-  - 	emplates/common/edge-detection-template.md
+  - `templates/common/edge-detection-template.md`
 
 - Advanced motion control sequence (PLCopen Part 1)
-  - 	emplates/common/motion-control-template.md
+  - `templates/common/motion-control-template.md`
 
 - Safe recipe loading and management
-  - 	emplates/common/recipe-management-template.md
+  - `templates/common/recipe-management-template.md`
 
 - Data logging and circular buffer array management
-  - 	emplates/common/data-logging-template.md
+  - `templates/common/data-logging-template.md`
 
 ## Selection rules
 

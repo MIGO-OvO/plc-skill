@@ -58,7 +58,8 @@ Vendor layers must not overwrite common engineering rules unless platform behavi
 
 - Common layer: active
 - Mitsubishi layer: mature
-- Other vendor layers: scaffolded, intentionally shallow, ready for later enrichment
+- Siemens / Rockwell / Omron layers: targeted, but not equal to Mitsubishi depth
+- Beckhoff / Schneider / Codesys / Delta / Keyence / Panasonic: baseline routing/reference modules
 
 ## Knowledge maintenance rule
 

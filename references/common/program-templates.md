@@ -9,9 +9,9 @@ It does not duplicate detailed task routing, review workflow, or debugging check
 
 Read with:
 
-- `references/task-router.md` for task classification
-- `references/output-format.md` for output shape
-- `references/debugging-checklists.md` when a generated template should end with troubleshooting guidance
+- `references/common/task-router.md` for task classification
+- `references/common/output-format.md` for output shape
+- `references/common/debugging-checklists.md` when a generated template should end with troubleshooting guidance
 
 ## Template selection
 
@@ -44,12 +44,12 @@ Prefer:
 
 If available, use:
 
-- `templates/state-machine-template.md`
-- `templates/alarm-latch-reset-template.md`
-- `templates/alarm-interlock-module-template.md`
-- `templates/start-stop-interlock-template.md`
-- `templates/sequence-step-template.md`
-- `templates/timer-counter-diagnostic-template.md`
-- `templates/output-ownership-review-template.md`
+- `templates/common/state-machine-template.md`
+- `templates/common/alarm-latch-reset-template.md`
+- `templates/common/alarm-interlock-module-template.md`
+- `templates/common/start-stop-interlock-template.md`
+- `templates/common/sequence-step-template.md`
+- `templates/common/timer-counter-diagnostic-template.md`
+- `templates/common/output-ownership-review-template.md`
 
 If a matching template does not exist, produce a compact reusable skeleton instead of a large one-off program.

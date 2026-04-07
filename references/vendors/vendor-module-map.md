@@ -6,11 +6,14 @@ Use this file to discover the available vendor modules and their intended depth.
 
 - Mitsubishi -> `references/vendors/mitsubishi/`
 
-## Scaffolded modules
+## Targeted modules
 
 - Siemens -> `references/vendors/siemens/`
 - Omron -> `references/vendors/omron/`
 - Rockwell -> `references/vendors/rockwell/`
+
+## Baseline routing/reference modules
+
 - Schneider -> `references/vendors/schneider/`
 - Delta -> `references/vendors/delta/`
 - Keyence -> `references/vendors/keyence/`

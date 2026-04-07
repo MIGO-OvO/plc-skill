@@ -9,8 +9,8 @@ It does not define the shared workflow.
 
 Read first when needed:
 
-- `references/debugging-and-review.md` for the common review workflow
-- `references/gxworks2-project-review-patterns.md` for GX Works2 project-level maintainability patterns
+- `references/common/debugging-and-review.md` for the common review workflow
+- `references/vendors/mitsubishi/gxworks2-project-review-patterns.md` for GX Works2 project-level maintainability patterns
 
 ## Core checklist
 
@@ -60,5 +60,5 @@ For each finding, report:
 
 ## Escalate to companion references
 
-Use `references/gxworks2-project-review-patterns.md` when the problem is project-level organization.
-Use `references/scan-cycle-and-output-ownership.md` when multi-writer or scan-order conflict is suspected.
+Use `references/vendors/mitsubishi/gxworks2-project-review-patterns.md` when the problem is project-level organization.
+Use `references/common/scan-cycle-and-output-ownership.md` when multi-writer or scan-order conflict is suspected.

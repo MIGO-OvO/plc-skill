@@ -1,14 +1,14 @@
 # ST style guide
 
 **Scope of this file**: naming conventions, variable declarations, code organization, sequence/alarm/output logic structure, and review priorities.
-For response output format and presentation order, see `references/st-output-style.md`.
+For ST-specific response output format and presentation order, see `references/common/st-output-style.md`.
 
 Use this file when generating, explaining, reviewing, or refactoring Structured Text for this skill.
 
 ## Scope
 
-This guide is for phase-1 Mitsubishi FX3U + GX Works2 Structured Project work.
-It is not a generic style guide for all IEC 61131-3 environments.
+This is the common ST style guide for vendor-neutral Structured Text work across the skill.
+It does not replace vendor-specific syntax, memory, or tooling rules.
 
 ## Core style goals
 
@@ -80,11 +80,17 @@ If multiple sections affect one output, make the ownership and priority explicit
 
 ## Syntax-sensitive caution
 
-If the exact GX Works2 / Mitsubishi ST syntax is not confirmed from local docs for a specific construct:
+If the exact target-platform ST syntax is not confirmed from local docs for a specific construct:
 
 - provide a platform-aware draft
 - label syntax-sensitive areas as assumptions
-- say which local manual category should be checked to finalize syntax
+- say which vendor manual category should be checked to finalize syntax
+
+If the target is Mitsubishi FX3U / GX Works2, add:
+
+- `references/vendors/mitsubishi/mitsubishi-rules.md`
+- `references/vendors/mitsubishi/fx3u-device-and-instruction-notes.md`
+- `references/vendors/mitsubishi/gxworks2-structured-project.md`
 
 ## Evidence-aware explanation rule
 

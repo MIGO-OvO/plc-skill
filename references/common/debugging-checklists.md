@@ -9,8 +9,8 @@ It does not repeat the shared troubleshooting workflow.
 
 Read first when needed:
 
-- `references/debugging-and-review.md` for workflow and evidence handling
-- `references/scan-cycle-and-output-ownership.md` when scan order or multi-writer risk is involved
+- `references/common/debugging-and-review.md` for workflow and evidence handling
+- `references/common/scan-cycle-and-output-ownership.md` when scan order or multi-writer risk is involved
 
 ## Quick fault isolation checklist
 

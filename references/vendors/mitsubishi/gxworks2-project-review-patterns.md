@@ -9,8 +9,8 @@ It does not replace the shared workflow or the detailed checklists.
 
 Read with:
 
-- `references/debugging-and-review.md` for workflow and refactoring preference
-- `references/code-review-checklists.md` for finding-by-finding checklist output
+- `references/common/debugging-and-review.md` for workflow and refactoring preference
+- `references/common/code-review-checklists.md` for finding-by-finding checklist output
 
 ## Review priorities
 

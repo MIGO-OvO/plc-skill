@@ -6,7 +6,7 @@ We welcome contributions to expand the common layer and vendor support! However,
 
 1. **No Manual Copy-Pasting:** Do NOT paste entire tables of vendor error codes, instruction sets, or wiring diagrams. Provide the *link* to the official manual instead. 
 2. **Focus on "Gotchas", not "Basics":** The AI already knows basic IEC 61131-3 syntax. Tell the AI what it *doesn't* know (e.g., "In Siemens, FCs don't retain memory between scans", "In Mitsubishi, timers are strictly bound to T-devices").
-3. **Maximum File Size:** Keep markdown references under 200 lines. If it's longer, it's too bloated. 
+3. **Prefer compact files:** Aim to keep markdown references under roughly 200 lines. If a file grows past that, split it unless the topic genuinely needs a longer cohesive reference, such as a vendor programming guide or official-doc index.
 
 ## Adding a New Vendor
 
@@ -24,3 +24,10 @@ If you have a great PLC design pattern (e.g., FIFO, Shift Register, PID wrapper)
 2. Ensure the code is strictly IEC 61131-3 generic Structured Text.
 3. Decouple it from physical I/O (use generic UDTs/Structs).
 4. Register it in `templates/common/template-map.md`.
+
+## Validation Before PR
+
+Before opening a pull request:
+
+1. Run `npm test` to check internal markdown links, placeholder text, and package metadata consistency.
+2. Review touched files for support-depth wording so it stays aligned with `references/vendors/vendor-module-map.md`.

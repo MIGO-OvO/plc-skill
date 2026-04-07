@@ -1,91 +1,111 @@
-﻿# PLC_SKILL
+# PLC_SKILL
 
-> 生产级的工业控制编程 AI Agent 技能。采用“通用工程 + 品牌特化”的双层架构，既能处理通用的 IEC 61131-3 逻辑，又能为西门子、罗克韦尔、三菱、欧姆龙等主流 PLC 品牌提供深度、准确的路由和规范。
+> 一个面向工业控制编程的生产级 AI Agent Skill。它采用“通用工程层 + 品牌特化层”的双层架构，既能处理 IEC 61131-3 通用逻辑，又能在识别出目标平台后切入品牌感知规则与文档。
 
 [Read in English](./README.md)
 
 ## 这是什么？
 
-PLC_SKILL 是为 OpenClaw、Cursor、Claude Code 等 AI 编程工具设计的一个可扩展技能（Skill）。
+PLC_SKILL 是为 OpenClaw、Cursor、Claude Code 等 LLM 编程工具准备的可扩展 Skill。
 
-与那些把所有 PLC 混为一谈的基础 Prompt 不同，本技能采用了**分层架构**：
-1. **通用 PLC 层**：处理跨平台的工程规则（如状态机设计、扫描周期推理、模块化结构、联锁与报警模式）。
-2. **品牌特化层**：当检测到特定的品牌或软件环境时自动介入，提供准确的语法、内存模型、软件环境规范以及官方文档索引。
+和把所有 PLC 混为一谈的通用 Prompt 不同，这个 Skill 会把上下文拆成两层：
 
-这能有效防止 AI 生成“模糊的伪代码”，强制其输出结构清晰、可审查、且符合特定平台规范的控制逻辑。
+1. **通用 PLC 层**：处理扫描周期、状态机、联锁、输出所有权、代码审查与调试流程等跨平台工程规则。
+2. **品牌特化层**：根据品牌术语、软件环境、内存模型和项目结构规则做进一步路由。
+
+这样可以减少“泛泛 IEC 伪代码”，让输出更结构化、可审查、可维护。
 
 ## 核心能力
 
-- **逻辑设计与生成**：基于工程最佳实践，生成结构化文本 (ST)、梯形图 (LD) 和顺序功能图 (SFC)。
-- **状态机与顺控**：构建具有清晰状态流转逻辑和明确输出所有权的复杂步进顺控程序。
-- **代码审查与重构**：审查现有逻辑的可维护性，排查竞争冒险（Race Conditions）、双线圈冲突和混乱的 I/O 映射。
-- **调试与排障**：为在线调试提供系统性的故障隔离步骤。
-- **品牌感知路由**：在各大生态系统（如 Siemens TIA Portal, Rockwell Studio 5000, Mitsubishi GX Works 等）之间无缝切换上下文。
+- **逻辑设计与生成**：生成面向 ST、LD、FBD、SFC 的结构化输出。
+- **状态机与顺控**：构建显式状态、显式流转、显式输出所有权的顺控逻辑。
+- **代码审查与重构**：审查可维护性、扫描周期冲突和隐藏的多写点问题。
+- **调试与排障**：使用“先观察、后假设”的故障隔离流程。
+- **品牌感知路由**：根据 TIA Portal、Studio 5000、GX Works、Sysmac Studio、TwinCAT 等上下文切换规则。
+
+## 当前支持深度
+
+- **最深的生产级路径**：Mitsubishi FX3U + GX Works2 + Structured Project + ST。
+- **定向增强模块**：Siemens、Rockwell、Omron，具备品牌路由、规则和针对性 eval 覆盖。
+- **基础路由/参考模块**：Beckhoff、Schneider、Codesys、Delta、Keyence、Panasonic。
+
+不要假设所有品牌路径都具备相同深度。
 
 ## 适用场景
 
-当你需要 Agent 完成以下任务时，请触发此技能：
-- 用结构化文本（ST）编写一个状态机或顺控器。
-- 审查一段梯形图代码，寻找扫描周期引发的 Bug 或双线圈冲突。
-- 将混乱的“面条式代码”重构为具有清晰 I/O 映射的模块化结构。
-- 在现场调试时，排查特定的定时器、边沿触发或联锁逻辑为何失效。
-- 将通用的控制逻辑概念映射到特定品牌的软件中（例如，如何在 Omron Sysmac Studio 中实现某功能）。
+当你需要 Agent 完成以下任务时，请触发此 Skill：
 
-**不适用场景**：没有控制逻辑上下文的纯电气接线问题、宽泛的 IT 网络问题，以及要求给出明确安全认证结论（如 SIL/PL 级别）的场景。
+- 用 ST 编写状态机或顺控器。
+- 审查梯形图中的扫描周期问题或多写点冲突。
+- 把“面条式逻辑”重构成边界清晰、I/O 所有权明确的结构。
+- 排查定时器、边沿触发、锁存/复位或联锁逻辑故障。
+- 将通用控制概念映射到特定品牌的软件环境中。
+
+不适用于纯电气接线、脱离控制程序上下文的网络问题，或要求给出明确 SIL/PL 安全认证结论的场景。
 
 ## 仓库结构
 
-`	ext
+```text
 PLC_SKILL/
-├── SKILL.md                 # Agent 的主入口点和触发规则
-├── INSTALL.md               # OpenClaw, Cursor, Claude Code 等工具的安装指南
+├── SKILL.md
+├── INSTALL.md
 ├── references/
-│   ├── common/              # 跨品牌通用规则：扫描周期、状态机、代码审查清单
-│   └── vendors/             # 品牌特化模块：西门子、罗克韦尔、三菱、欧姆龙等
-├── templates/               # 可复用的控制模式与模板代码
-├── examples/                # 触发示例与生成样例
-├── evals/                   # 技能的回归测试矩阵
-└── docs/guides/             # 架构、扩展与评估用例用户指南
-`
+│   ├── common/
+│   └── vendors/
+├── templates/
+├── examples/
+├── evals/
+├── docs/guides/
+└── bin/
+```
 
 ## 安装与接入
 
-### 方式 1: NPM 全局安装 (推荐)
-你可以通过 NPM 全局安装此技能。这会自动将知识库部署到您的 `~/.agents/skills/plc-skill` 目录下，供 OpenCode 直接调用。
+### 方式 1：NPM 全局安装
 
 ```bash
 npm install -g plc-skill
 install-plc-skill
 ```
 
-### 方式 2: Git Clone
-本 Skill 专为 Oh My OpenCode 代理框架原生设计。
+`npm install -g` 会安装包本身和 `install-plc-skill` 命令；`install-plc-skill` 会把 Skill 复制到 `~/.agents/skills/plc-skill`。
 
-1. 克隆本仓库到本地：
+### 方式 2：Git Clone
+
 ```bash
 git clone https://github.com/MIGO-OvO/plc-skill.git
 cd plc-skill
 ```
 
-2. 将目录移动或链接到您的 `~/.agents/skills/` 文件夹下。
+然后把仓库移动或链接到 `~/.agents/skills/`，或者让你的工具直接读取这个本地仓库。
 
-### 在其他工具中使用 (Cursor, Claude Code 等)
-请查看 [INSTALL.md](./INSTALL.md)，了解如何在您喜欢的 AI 编程环境中配置和使用此技能。
+### 其他工具
+
+Cursor、Claude Code 等工具的配置方式见 [INSTALL.md](./INSTALL.md)。
+
+## 仓库校验
+
+在发布或合并结构性文档修改前，先运行仓库一致性检查：
+
+```bash
+npm test
+```
 
 ## 设计原则
 
-1. **模块化优先于大而全**：AI 输出应当是模块化、易于审查的代码块，而不是丢出一大坨无法维护的代码。
-2. **品牌隔离**：绝不随意混合不同品牌的语法。如果品牌未知，AI 必须明确说明其所作的假设。
-3. **面对缺失信息保持克制**：如果 I/O 列表或工艺要求不完整，Agent 必须提问或使用占位符，绝不捏造虚假的确定性。
-4. **安全边界**：本技能明确拒绝在没有现场确认的情况下，为涉及安全（Fail-safe）的物理系统提供高置信度的结论。
+1. **模块化优先于大而全**：输出应该是可复用、可审查的模块，而不是一大段难以维护的代码。
+2. **品牌边界清晰**：不要随意混用不同品牌的语法；平台未知时要明确哪些细节依赖品牌。
+3. **面对缺失信息保持克制**：使用假设或追问，不制造虚假的确定性。
+4. **遵守安全边界**：没有现场条件确认时，不给出高置信度的安全结论。
 
-## 贡献与扩展
+## 扩展方式
 
-当您需要添加或深化某个品牌模块时：
-1. 定义该品牌的识别信号（专有术语、软件名称）。
-2. 添加品牌 Overview 文件。
-3. 建立官方文档索引。
-4. 根据实际需要，补充特定的规则（如内存模型、指令差异）。
-5. **保持通用概念留在 common/ 目录中**，避免污染各品牌的独立目录。
+当你需要新增或加深某个品牌模块时：
 
-详细的扩展指南请参阅 docs/guides/adding-new-vendors.md 和 docs/guides/architecture.md。
+1. 定义品牌识别信号。
+2. 添加或更新该品牌的 overview 和 rules 文件。
+3. 维护 official-doc index。
+4. 仅在通用层不够时增加品牌特化规则。
+5. 将跨品牌工程规则保留在 `references/common/` 中。
+
+更多细节见 [docs/guides/adding-new-vendors.md](./docs/guides/adding-new-vendors.md) 与 [docs/guides/architecture.md](./docs/guides/architecture.md)。

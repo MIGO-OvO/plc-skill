@@ -15,9 +15,9 @@ This file does not duplicate detailed checklists.
 
 Use these companions instead:
 
-- `references/debugging-checklists.md` for fault-isolation checklists
-- `references/code-review-checklists.md` for review findings and report shape
-- `references/gxworks2-project-review-patterns.md` for GX Works2 project-level maintainability patterns
+- `references/common/debugging-checklists.md` for fault-isolation checklists
+- `references/common/code-review-checklists.md` for review findings and report shape
+- `references/vendors/mitsubishi/gxworks2-project-review-patterns.md` for GX Works2 project-level maintainability patterns
 
 ## Shared operating rules
 
@@ -50,9 +50,9 @@ Start from observable behavior and narrow down:
 
 Then read:
 
-- `references/debugging-checklists.md`
-- `references/scan-cycle-and-output-ownership.md`
-- `references/alarm-and-interlock-patterns.md` when alarms or interlocks are involved
+- `references/common/debugging-checklists.md`
+- `references/common/scan-cycle-and-output-ownership.md`
+- `references/common/alarm-and-interlock-patterns.md` when alarms or interlocks are involved
 
 ## Review workflow
 
@@ -67,9 +67,9 @@ For review or refactor tasks, assess structure before style:
 
 Then read:
 
-- `references/code-review-checklists.md`
-- `references/gxworks2-project-review-patterns.md`
-- `references/scan-cycle-and-output-ownership.md` when writer conflicts are suspected
+- `references/common/code-review-checklists.md`
+- `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`
+- `references/common/scan-cycle-and-output-ownership.md` when writer conflicts are suspected
 
 ## Refactoring preference
 
