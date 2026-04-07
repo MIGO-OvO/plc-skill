@@ -29,4 +29,19 @@ Use this file as the single-table index across all eval case files.
 | O2 | output behavior | explanation output format | output behavior | code explanation with scan-cycle interpretation | `evals/output-behavior-cases.md` |
 | O3 | output behavior | review output format | output behavior | issue list; impact; refactoring direction; validation checklist | `evals/output-behavior-cases.md` |
 | O4 | output behavior | debugging output format | output behavior | symptom restatement; facts vs hypotheses; practical debug plan | `evals/output-behavior-cases.md` |
+| VG1 | vendor generation | yes | vendor generation | Mitsubishi FX3U syntax, X/Y/M devices | `evals/vendor-generation-cases.md` |
+| VG2 | vendor generation | yes | vendor generation | Siemens S7-1500 DB and local tag `#` syntax | `evals/vendor-generation-cases.md` |
+| VG3 | vendor generation | yes | vendor generation | Rockwell tag-based addressing and AOI params | `evals/vendor-generation-cases.md` |
+| VG4 | vendor generation | yes | vendor generation | Omron Sysmac camelCase and IEC TON | `evals/vendor-generation-cases.md` |
+| VG5 | vendor migration | yes | vendor generation | Siemens to Rockwell syntax translation | `evals/vendor-generation-cases.md` |
+| VD1 | vendor debugging | yes | debugging | Mitsubishi scan time / WDT issue | `evals/vendor-debugging-cases.md` |
+| VD2 | vendor debugging | yes | debugging | Siemens optimized block pointer access error | `evals/vendor-debugging-cases.md` |
+| VD3 | vendor debugging | yes | debugging | Rockwell tag scope shadowing conflict | `evals/vendor-debugging-cases.md` |
+| LD1 | ladder generation | yes | generation | Motor start/stop with seal-in and ASCII art | `evals/ladder-diagram-cases.md` |
+| LD2 | ladder review | yes | review | Multiple-coil syndrome / double destructive write | `evals/ladder-diagram-cases.md` |
+| LD3 | ladder debugging | yes | debugging | Rung evaluation order causing scan cycle delay | `evals/ladder-diagram-cases.md` |
+| LD4 | ladder edge case | yes | explanation/generation | Complex string parsing in LD (suggest ST instead) | `evals/ladder-diagram-cases.md` |
+| SFC1 | sfc generation | yes | generation | 3-step sequence with N, S, R qualifiers | `evals/sfc-cases.md` |
+| SFC2 | sfc review | yes | review | Missing transition condition causing chart hang | `evals/sfc-cases.md` |
+| SFC3 | sfc explanation | yes | explanation | Difference between N and S action qualifiers | `evals/sfc-cases.md` |
 

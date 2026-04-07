@@ -43,6 +43,15 @@ Use this file to choose the nearest reusable template before writing a large cus
 - One-shot logic, edge detection, R_TRIG/F_TRIG patterns
   - 	emplates/common/edge-detection-template.md
 
+- Advanced motion control sequence (PLCopen Part 1)
+  - 	emplates/common/motion-control-template.md
+
+- Safe recipe loading and management
+  - 	emplates/common/recipe-management-template.md
+
+- Data logging and circular buffer array management
+  - 	emplates/common/data-logging-template.md
+
 ## Selection rules
 
 - Prefer state-machine and step templates for expandable sequential processes.
