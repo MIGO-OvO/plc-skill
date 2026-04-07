@@ -1,35 +1,47 @@
-# Template map
+﻿# Template map
 
 Use this file to choose the nearest reusable template before writing a large custom answer.
 
 ## Common template selection
 
 - Standard equipment module (Auto/Manual/Fault handling)
-  - `templates/common/equipment-module-template.md`
+  - 	emplates/common/equipment-module-template.md
 
 - Start / stop motor or actuator control
-  - `templates/common/start-stop-interlock-template.md`
+  - 	emplates/common/start-stop-interlock-template.md
 
 - Sequence flow with explicit steps
-  - `templates/common/sequence-step-template.md`
+  - 	emplates/common/sequence-step-template.md
 
 - Advanced sequence flow (Pause / Resume / Abort handling)
-  - `templates/common/pause-resume-sequence-template.md`
+  - 	emplates/common/pause-resume-sequence-template.md
 
 - State-based machine control
-  - `templates/common/state-machine-template.md`
+  - 	emplates/common/state-machine-template.md
 
 - Alarm latch, hold, and reset behavior
-  - `templates/common/alarm-latch-reset-template.md`
+  - 	emplates/common/alarm-latch-reset-template.md
 
 - Alarm/interlock module design
-  - `templates/common/alarm-interlock-module-template.md`
+  - 	emplates/common/alarm-interlock-module-template.md
 
 - Timer / counter diagnosis
-  - `templates/common/timer-counter-diagnostic-template.md`
+  - 	emplates/common/timer-counter-diagnostic-template.md
 
 - Output ownership review
-  - `templates/common/output-ownership-review-template.md`
+  - 	emplates/common/output-ownership-review-template.md
+
+- Analog scaling, fault detection, limit clamping
+  - 	emplates/common/analog-scaling-template.md
+
+- Signal filtering, digital debounce, analog smoothing
+  - 	emplates/common/debounce-filter-template.md
+
+- Process control loops, PID wrapper, Auto/Manual bumpless
+  - 	emplates/common/pid-control-template.md
+
+- One-shot logic, edge detection, R_TRIG/F_TRIG patterns
+  - 	emplates/common/edge-detection-template.md
 
 ## Selection rules
 
