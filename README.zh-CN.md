@@ -1,4 +1,4 @@
-# PLC_SKILL
+﻿# PLC_SKILL
 
 > 生产级的工业控制编程 AI Agent 技能。采用“通用工程 + 品牌特化”的双层架构，既能处理通用的 IEC 61131-3 逻辑，又能为西门子、罗克韦尔、三菱、欧姆龙等主流 PLC 品牌提供深度、准确的路由和规范。
 
@@ -6,7 +6,7 @@
 
 ## 这是什么？
 
-`PLC_SKILL` 是为 OpenClaw、Cursor、Claude Code 等 AI 编程工具设计的一个可扩展技能（Skill）。
+PLC_SKILL 是为 OpenClaw、Cursor、Claude Code 等 AI 编程工具设计的一个可扩展技能（Skill）。
 
 与那些把所有 PLC 混为一谈的基础 Prompt 不同，本技能采用了**分层架构**：
 1. **通用 PLC 层**：处理跨平台的工程规则（如状态机设计、扫描周期推理、模块化结构、联锁与报警模式）。
@@ -35,7 +35,7 @@
 
 ## 仓库结构
 
-```text
+`	ext
 PLC_SKILL/
 ├── SKILL.md                 # Agent 的主入口点和触发规则
 ├── INSTALL.md               # OpenClaw, Cursor, Claude Code 等工具的安装指南
@@ -45,8 +45,8 @@ PLC_SKILL/
 ├── templates/               # 可复用的控制模式与模板代码
 ├── examples/                # 触发示例与生成样例
 ├── evals/                   # 技能的回归测试矩阵
-└── docs/                    # 随附的参考资料与手册
-```
+└── docs/guides/             # 架构、扩展与评估用例用户指南
+`
 
 ## 安装与接入
 
@@ -54,10 +54,10 @@ PLC_SKILL/
 本 Skill 专为 Oh My OpenCode 代理框架原生设计。
 
 1. 克隆本仓库到本地：
-```bash
+`ash
 git clone https://github.com/YOUR_USERNAME/plc-skill.git
 cd plc-skill
-```
+`
 
 2. 在您的 OpenCode 配置中注册此 skill。
 
@@ -78,6 +78,6 @@ cd plc-skill
 2. 添加品牌 Overview 文件。
 3. 建立官方文档索引。
 4. 根据实际需要，补充特定的规则（如内存模型、指令差异）。
-5. **保持通用概念留在 `common/` 目录中**，避免污染各品牌的独立目录。
+5. **保持通用概念留在 common/ 目录中**，避免污染各品牌的独立目录。
 
-详细的扩展指南请参阅 `references/skill-architecture.md`。
+详细的扩展指南请参阅 docs/guides/adding-new-vendors.md 和 docs/guides/architecture.md。

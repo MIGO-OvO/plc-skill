@@ -1,4 +1,4 @@
-# PLC_SKILL
+﻿# PLC_SKILL
 
 > A production-grade AI agent skill for industrial control programming. Built with a two-layer architecture (Common Engineering + Vendor Specific) to handle general IEC 61131-3 logic while providing deep, accurate routing for top PLC brands like Siemens, Rockwell, Mitsubishi, and Omron.
 
@@ -6,7 +6,7 @@
 
 ## What is this?
 
-`PLC_SKILL` is an extensible AI skill for OpenClaw, Cursor, Claude Code, and other LLM-powered development tools. 
+PLC_SKILL is an extensible AI skill for OpenClaw, Cursor, Claude Code, and other LLM-powered development tools. 
 
 Unlike basic prompts that treat all PLCs the same, this skill implements a **Layered Architecture**:
 1. **Common PLC Layer**: Handles cross-platform engineering rules (state machines, scan-cycle reasoning, modularity, interlocks).
@@ -35,7 +35,7 @@ Trigger this skill when you need the agent to:
 
 ## Repository Structure
 
-```text
+`	ext
 PLC_SKILL/
 ├── SKILL.md                 # Primary entry point and trigger rules for the agent
 ├── INSTALL.md               # Setup guide for OpenClaw, Cursor, Claude Code, etc.
@@ -45,8 +45,8 @@ PLC_SKILL/
 ├── templates/               # Reusable control patterns and boilerplate
 ├── examples/                # Trigger samples and generation examples
 ├── evals/                   # Regression testing matrix for the skill
-└── docs/                    # Bundled source materials and manuals
-```
+└── docs/guides/             # Architecture, Extension, and Testing guides
+`
 
 ## Installation & Setup
 
@@ -54,10 +54,10 @@ PLC_SKILL/
 This skill is designed to work natively with the Oh My OpenCode agent framework.
 
 1. Clone this repository to your local machine:
-```bash
+`ash
 git clone https://github.com/YOUR_USERNAME/plc-skill.git
 cd plc-skill
-```
+`
 
 2. Register the skill in your OpenCode configuration.
 
@@ -78,6 +78,6 @@ When adding or deepening a vendor module:
 2. Add a vendor overview file.
 3. Index official documentation.
 4. Add specific rules (memory models, instruction quirks) only as needed.
-5. **Keep common concepts in the `common/` folder** to avoid polluting vendor directories.
+5. **Keep common concepts in the common/ folder** to avoid polluting vendor directories.
 
-See `references/skill-architecture.md` for detailed extension guidelines.
+See docs/guides/adding-new-vendors.md and docs/guides/architecture.md for detailed extension guidelines.
