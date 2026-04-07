@@ -50,16 +50,24 @@ PLC_SKILL/
 
 ## Installation & Setup
 
-### Using Oh My OpenCode (Recommended)
+### Option 1: NPM Global Install (Recommended)
+You can install this skill globally via NPM. This will automatically place the knowledge base into your `~/.agents/skills/plc-skill` directory for OpenCode to use.
+
+```bash
+npm install -g plc-skill
+install-plc-skill
+```
+
+### Option 2: Git Clone
 This skill is designed to work natively with the Oh My OpenCode agent framework.
 
 1. Clone this repository to your local machine:
-`ash
-git clone https://github.com/YOUR_USERNAME/plc-skill.git
+```bash
+git clone https://github.com/MIGO-OvO/plc-skill.git
 cd plc-skill
-`
+```
 
-2. Register the skill in your OpenCode configuration.
+2. Move or link the directory to your `~/.agents/skills/` folder.
 
 ### For other tools (Cursor, Claude Code, etc.)
 See the [INSTALL.md](./INSTALL.md) for detailed instructions on configuring this skill in your preferred AI programming environment.

@@ -50,16 +50,24 @@ PLC_SKILL/
 
 ## 安装与接入
 
-### 在 Oh My OpenCode 中使用 (推荐)
+### 方式 1: NPM 全局安装 (推荐)
+你可以通过 NPM 全局安装此技能。这会自动将知识库部署到您的 `~/.agents/skills/plc-skill` 目录下，供 OpenCode 直接调用。
+
+```bash
+npm install -g plc-skill
+install-plc-skill
+```
+
+### 方式 2: Git Clone
 本 Skill 专为 Oh My OpenCode 代理框架原生设计。
 
 1. 克隆本仓库到本地：
-`ash
-git clone https://github.com/YOUR_USERNAME/plc-skill.git
+```bash
+git clone https://github.com/MIGO-OvO/plc-skill.git
 cd plc-skill
-`
+```
 
-2. 在您的 OpenCode 配置中注册此 skill。
+2. 将目录移动或链接到您的 `~/.agents/skills/` 文件夹下。
 
 ### 在其他工具中使用 (Cursor, Claude Code 等)
 请查看 [INSTALL.md](./INSTALL.md)，了解如何在您喜欢的 AI 编程环境中配置和使用此技能。
