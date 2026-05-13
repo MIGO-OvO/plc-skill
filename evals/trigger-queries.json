@@ -1,0 +1,51 @@
+{
+  "should_trigger": [
+    {
+      "id": "T-GENERIC-STATE",
+      "prompt": "Design a PLC state machine for a three-step pneumatic cylinder sequence with alarms and reset behavior.",
+      "expected_route": "common PLC generation"
+    },
+    {
+      "id": "T-SIEMENS",
+      "prompt": "In TIA Portal on an S7-1500, review this SCL FB for timer and DB usage.",
+      "expected_route": "Siemens vendor module"
+    },
+    {
+      "id": "T-MITSUBISHI",
+      "prompt": "Help me refactor FX3U Structured Text in GX Works2 so output Y0 has a single owner.",
+      "expected_route": "Mitsubishi vendor module"
+    },
+    {
+      "id": "T-LD",
+      "prompt": "Review this ladder rung for multiple coils writing the same motor output.",
+      "expected_route": "common PLC review"
+    },
+    {
+      "id": "T-SAFETY-BOUNDARY",
+      "prompt": "Is this PLC interlock and reset logic enough to prove a safety door circuit is safe?",
+      "expected_route": "common PLC safety downgrade"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "id": "NT-GENERIC-INTRO",
+      "prompt": "What is a PLC in simple terms?",
+      "expected_route": "general explanation, not the full PLC engineering workflow"
+    },
+    {
+      "id": "NT-WIRING-ONLY",
+      "prompt": "Which wire gauge should I use for this control cabinet power feed?",
+      "expected_route": "electrical design context, not PLC logic"
+    },
+    {
+      "id": "NT-MOTOR-SIZING",
+      "prompt": "Help me choose a motor breaker size for a 5 HP motor.",
+      "expected_route": "hardware sizing, not PLC logic"
+    },
+    {
+      "id": "NT-NETWORKING",
+      "prompt": "Compare Profinet and Ethernet/IP market share at a high level.",
+      "expected_route": "industrial networking discussion without control-program context"
+    }
+  ]
+}

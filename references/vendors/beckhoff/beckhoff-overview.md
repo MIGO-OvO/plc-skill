@@ -56,9 +56,9 @@ Beckhoff invented EtherCAT, the high-speed industrial Ethernet protocol.
 
 ### ADS Communication
 ADS (Automation Device Specification) is Beckhoff's proprietary protocol for inter-process communication:
-- PLC â†?C++ modules
-- PLC â†?HMI
-- PLC â†?External applications (C#, Python, MATLAB)
+- PLC ->C++ modules
+- PLC ->HMI
+- PLC ->External applications (C#, Python, MATLAB)
 - Very efficient, symbol-based access to variables
 
 ## Controller Families
@@ -127,10 +127,10 @@ Route to Beckhoff module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Beckhoff to another vendor (or vice versa), explicitly map the concepts:
-- Beckhoff Task â†?Siemens OB / Rockwell Task
-- Beckhoff FB with Methods â†?Siemens FB / Rockwell AOI
-- Beckhoff DUT â†?Siemens UDT / Rockwell UDT
-- Beckhoff ADS â†?Vendor-specific communication (Siemens S7 Comm, Rockwell CIP)
+- Beckhoff Task ->Siemens OB / Rockwell Task
+- Beckhoff FB with Methods ->Siemens FB / Rockwell AOI
+- Beckhoff DUT ->Siemens UDT / Rockwell UDT
+- Beckhoff ADS ->Vendor-specific communication (Siemens S7 Comm, Rockwell CIP)
 
 ---
 

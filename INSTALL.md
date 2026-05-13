@@ -4,17 +4,25 @@
 
 ### Option 1: NPM Global Install
 
-The easiest way to install this skill for OpenClaw or similar AI agents is via NPM:
+The easiest way to install this skill for Claude Code, OpenClaw, or similar AI agents is via NPM:
 
 ```bash
 # 1. Install the package globally
 npm install -g plc-skill
 
-# 2. Copy the skill into ~/.agents/skills/plc-skill
-install-plc-skill
+# 2. Copy the runtime skill payload into Claude Code
+install-plc-skill --target claude-code
 ```
 
-`npm install -g` installs the package and the `install-plc-skill` helper. The actual copy into `~/.agents/skills/plc-skill` happens when you run `install-plc-skill`.
+`npm install -g` installs the package and the `install-plc-skill` helper. The Claude Code target copies the runtime payload into `~/.claude/skills/plc-skill`.
+
+Other targets:
+
+```bash
+install-plc-skill --target agents       # ~/.agents/skills/plc-skill
+install-plc-skill --target both         # both Claude Code and ~/.agents
+install-plc-skill --target both --dry-run
+```
 
 On Windows PowerShell, use the same commands.
 
@@ -26,7 +34,15 @@ cd ~/.agents/skills/
 git clone https://github.com/MIGO-OvO/plc-skill.git
 ```
 
-If your tool supports direct local-document references, you can also point it at a normal local clone instead of moving it into `~/.agents/skills/`.
+For Claude Code, prefer installing from a normal local clone instead of placing the full repository under the skill directory:
+
+```bash
+git clone https://github.com/MIGO-OvO/plc-skill.git
+cd plc-skill
+node bin/install.js --target claude-code
+```
+
+This keeps maintainer docs, package metadata, and eval files out of the runtime skill context.
 
 ## Verify Installation
 
@@ -40,7 +56,7 @@ These environments can use the skill repository directly.
 
 Setup:
 
-1. Place the repository at `~/.agents/skills/plc-skill/`, or run `install-plc-skill`.
+1. Run `install-plc-skill --target agents`.
 2. Add the skill to your agent configuration.
 
 ### Cursor
@@ -60,7 +76,17 @@ When answering PLC-related questions:
 4. Use vendor official-doc indexes when vendor-specific certainty matters.
 ```
 
-### Claude Code and Other Tools
+### Claude Code
+
+Claude Code reads skills from `~/.claude/skills/`.
+
+Setup:
+
+1. Run `install-plc-skill --target claude-code`.
+2. Confirm `~/.claude/skills/plc-skill/SKILL.md` exists.
+3. Ask a PLC-programming question that should trigger the skill.
+
+### Other Tools
 
 Most AI coding tools can reference local documentation.
 
@@ -117,7 +143,7 @@ To contribute:
 1. Fork the repository.
 2. Make your changes.
 3. Run `npm test`.
-4. Validate the relevant eval cases in `evals/`.
+4. Validate the relevant eval cases in `evals/`, including `evals/evals.json` and `evals/trigger-queries.json`.
 5. Submit a pull request.
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.

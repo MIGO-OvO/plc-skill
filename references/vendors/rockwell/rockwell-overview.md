@@ -132,10 +132,10 @@ Route to Rockwell module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Rockwell to another vendor (or vice versa), explicitly map the concepts:
-- Rockwell Task â†?Siemens OB / Codesys Task
-- Rockwell AOI â†?Siemens FB / Codesys Function Block
-- Rockwell Controller-Scoped Tag â†?Siemens Global DB / Codesys GVL
-- Rockwell Program-Scoped Tag â†?Siemens Instance DB / Codesys Program Variable
+- Rockwell Task ->Siemens OB / Codesys Task
+- Rockwell AOI ->Siemens FB / Codesys Function Block
+- Rockwell Controller-Scoped Tag ->Siemens Global DB / Codesys GVL
+- Rockwell Program-Scoped Tag ->Siemens Instance DB / Codesys Program Variable
 
 ---
 

@@ -91,10 +91,10 @@ Route to Keyence module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Keyence to another vendor (or vice versa), explicitly map the concepts:
-- Keyence Script â†?Siemens SCL / Rockwell ST / Codesys ST
-- Keyence Symbol â†?Rockwell Tag / Codesys Variable
-- Keyence Machine Operation Recorder â†?Siemens Trace / Rockwell Trend (though Keyence's is more deeply integrated by default)
-- Keyence R/DM (legacy addressing) â†?Mitsubishi M/D / Omron CIO/D
+- Keyence Script ->Siemens SCL / Rockwell ST / Codesys ST
+- Keyence Symbol ->Rockwell Tag / Codesys Variable
+- Keyence Machine Operation Recorder ->Siemens Trace / Rockwell Trend (though Keyence's is more deeply integrated by default)
+- Keyence R/DM (legacy addressing) ->Mitsubishi M/D / Omron CIO/D
 
 ---
 

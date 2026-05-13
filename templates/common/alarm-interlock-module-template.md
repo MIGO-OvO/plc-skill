@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use for reusable alarm and interlock handling in FX3U ST projects where readability, reset behavior, and fault visibility matter.
+Use for reusable alarm and interlock handling in IEC 61131-3 ST projects where readability, reset behavior, and fault visibility matter.
 
 ## Recommended module responsibilities
 

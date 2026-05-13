@@ -4,7 +4,7 @@ Use this file when generating, reviewing, or debugging alarm logic, permissives,
 
 ## Why this matters
 
-Current Mitsubishi safety text and PLCopen software-construction guidance both point in the same direction:
+Platform safety guidance and PLCopen software-construction guidance point in the same direction:
 
 - critical behavior should be explicit
 - hidden dependencies are dangerous

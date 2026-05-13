@@ -105,10 +105,10 @@ If the user specifies M241, M251, M262, or Machine Expert/SoMachine, route them 
 
 ### Mixing Vendors
 If a user asks to migrate from Schneider to another vendor (or vice versa), explicitly map the concepts:
-- Schneider MAST Task â†?Siemens OB1 / Rockwell Continuous Task
-- Schneider DFB â†?Siemens FB / Rockwell AOI
-- Schneider DDT â†?Siemens UDT / Rockwell UDT
-- Schneider `%MW` â†?Siemens DB / Mitsubishi `D` registers
+- Schneider MAST Task ->Siemens OB1 / Rockwell Continuous Task
+- Schneider DFB ->Siemens FB / Rockwell AOI
+- Schneider DDT ->Siemens UDT / Rockwell UDT
+- Schneider `%MW` ->Siemens DB / Mitsubishi `D` registers
 
 ---
 

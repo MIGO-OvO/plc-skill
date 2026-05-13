@@ -98,8 +98,8 @@ Route to Panasonic module when any of these cues are present:
 ### FPWIN Pro vs. Legacy Software
 - **Control FPWIN Pro**: Modern, IEC 61131-3 compliant software for all current FP series.
 - **FPWIN GR**: Legacy software for older FP series (FP1, FP-M, FP-C). Different programming paradigm.
-- If the user mentions FP0, FP-X, FPÎ£ â†?use FPWIN Pro rules.
-- If the user mentions FP1, FP-M â†?note that these are legacy and use different software.
+- If the user mentions FP0, FP-X, FPÎ£ ->use FPWIN Pro rules.
+- If the user mentions FP1, FP-M ->note that these are legacy and use different software.
 
 ### Panasonic vs. Other IEC 61131-3 Platforms
 - FPWIN Pro is very similar to Codesys, Beckhoff TwinCAT, and other IEC-compliant platforms.
@@ -108,10 +108,10 @@ Route to Panasonic module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Panasonic to another vendor (or vice versa), explicitly map the concepts:
-- Panasonic DUT â†?Siemens UDT / Rockwell UDT / Codesys DUT
-- Panasonic Global Variable â†?Siemens Global DB / Rockwell Controller-Scoped Tag / Codesys GVL
-- Panasonic RTEX Motion â†?Siemens S7-1500 Motion / Rockwell Kinetix / Beckhoff TwinCAT Motion
-- Panasonic R/T/C (legacy addressing) â†?Mitsubishi M/T/C / Omron CIO/T/C
+- Panasonic DUT ->Siemens UDT / Rockwell UDT / Codesys DUT
+- Panasonic Global Variable ->Siemens Global DB / Rockwell Controller-Scoped Tag / Codesys GVL
+- Panasonic RTEX Motion ->Siemens S7-1500 Motion / Rockwell Kinetix / Beckhoff TwinCAT Motion
+- Panasonic R/T/C (legacy addressing) ->Mitsubishi M/T/C / Omron CIO/T/C
 
 ---
 

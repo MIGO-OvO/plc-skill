@@ -119,10 +119,10 @@ Route to Codesys module when any of these cues are present:
 
 ### Mixing Vendors
 If a user asks to migrate from Codesys to another vendor (or vice versa), explicitly map the concepts:
-- Codesys GVL â†?Siemens Global DB / Rockwell Controller-Scoped Tag
-- Codesys FB with Methods â†?Siemens FB / Rockwell AOI
-- Codesys DUT â†?Siemens UDT / Rockwell UDT
-- Codesys Task â†?Siemens OB / Rockwell Task
+- Codesys GVL ->Siemens Global DB / Rockwell Controller-Scoped Tag
+- Codesys FB with Methods ->Siemens FB / Rockwell AOI
+- Codesys DUT ->Siemens UDT / Rockwell UDT
+- Codesys Task ->Siemens OB / Rockwell Task
 
 ---
 
