@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const YAML = require('yaml');
 
 const rootDir = path.resolve(__dirname, '..');
 const markdownRefPattern = /(?:^|[\s(`'"])((?:references|templates|docs|evals|examples|bin)\/[A-Za-z0-9._/-]+\.md)(?=$|[\s)`'",.\]])/gm;
@@ -77,6 +76,52 @@ function readJson(relativePath) {
   return JSON.parse(readText(relativePath));
 }
 
+function stripYamlQuotes(value) {
+  const trimmed = value.trim();
+  const quote = trimmed[0];
+
+  if ((quote === '"' || quote === "'") && trimmed.endsWith(quote)) {
+    return trimmed.slice(1, -1);
+  }
+
+  return trimmed;
+}
+
+function parseSkillFrontmatter(rawFrontmatter) {
+  const result = {};
+  const lines = rawFrontmatter.split(/\r?\n/);
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    const match = line.match(/^([A-Za-z0-9_-]+):(?:\s*(.*))?$/);
+
+    if (!match) {
+      continue;
+    }
+
+    const [, key, rawValue = ''] = match;
+    const value = rawValue.trim();
+
+    if (value === '|' || value === '>') {
+      const blockLines = [];
+      index += 1;
+
+      while (index < lines.length && /^(?:\s+|$)/.test(lines[index])) {
+        blockLines.push(lines[index].replace(/^\s{2}/, ''));
+        index += 1;
+      }
+
+      index -= 1;
+      result[key] = value === '>' ? blockLines.join(' ').trim() : blockLines.join('\n').trim();
+      continue;
+    }
+
+    result[key] = stripYamlQuotes(value);
+  }
+
+  return result;
+}
+
 function verifyMarkdownReferences() {
   const markdownFiles = walk(rootDir).filter((filePath) => filePath.endsWith('.md'));
 
@@ -140,13 +185,7 @@ function verifySkillFrontmatter() {
     return;
   }
 
-  let frontmatter;
-  try {
-    frontmatter = YAML.parse(match[1]);
-  } catch (error) {
-    recordIssue(`SKILL.md: invalid YAML frontmatter (${error.message})`);
-    return;
-  }
+  const frontmatter = parseSkillFrontmatter(match[1]);
 
   if (frontmatter.name !== 'plc-skill') {
     recordIssue('SKILL.md: frontmatter name must be "plc-skill"');
