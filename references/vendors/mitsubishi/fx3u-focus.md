@@ -26,6 +26,10 @@ For FX3U tasks:
    - inferred engineering advice
 3. Prefer maintainable device and variable organization over ad-hoc addressing.
 
+## IEC / PLCopen framing
+
+Use IEC 61131-3 and PLCopen guidance as a structuring influence for FX3U work, especially for maintainable ST and SFC-informed organization. Do not use generic IEC or PLCopen guidance to override confirmed Mitsubishi syntax, device behavior, instruction availability, or GX Works2 project constraints.
+
 ## Typical task classes
 
 - Explain device usage and likely role in logic

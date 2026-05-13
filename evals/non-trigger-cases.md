@@ -49,15 +49,16 @@ User:
 
 Should trigger:
 
-- no
+- yes
 
 Task type:
 
-- wrong platform
+- vendor-specific Siemens routing
 
 Required:
 
-- do not use this Mitsubishi-focused skill by default
+- route to Siemens vendor guidance
+- do not use Mitsubishi-focused guidance by default
 
 Forbidden:
 

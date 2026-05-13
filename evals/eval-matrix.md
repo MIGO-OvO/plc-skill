@@ -19,7 +19,7 @@ Use this file as the single-table index across all eval case files.
 | I3 | incomplete input | yes | review or refactor with missing structure detail | propose structure without faking the real project tree | `evals/incomplete-input-cases.md` |
 | N1 | non-trigger | no | non-trigger | do not force FX3U-specific workflow into generic introduction | `evals/non-trigger-cases.md` |
 | N2 | non-trigger | no | non-trigger | do not trigger PLC programming workflow for hardware selection | `evals/non-trigger-cases.md` |
-| N3 | non-trigger | no | wrong platform | do not default to Mitsubishi-focused guidance | `evals/non-trigger-cases.md` |
+| N3 | non-trigger | yes | vendor-specific Siemens routing | do not default to Mitsubishi-focused guidance | `evals/non-trigger-cases.md` |
 | N4 | non-trigger | no direct normal trigger; safety caution only | safety boundary | no absolute safety conclusion from incomplete information | `evals/non-trigger-cases.md` |
 | RT1 | routing | yes | generation | classify as in-scope FX3U + GX Works2 + ST generation | `evals/routing-cases.md` |
 | RT2 | routing | yes | review | route to review workflow with ownership priority | `evals/routing-cases.md` |

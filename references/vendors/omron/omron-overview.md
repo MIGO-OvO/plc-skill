@@ -125,16 +125,16 @@ Route to Omron module when any of these cues are present:
 ### Sysmac vs. Legacy
 When a user mentions "Omron PLC" without specifying the series:
 - Ask which platform (Sysmac NJ/NX or legacy CJ/CS/CP)
-- If they mention Sysmac Studio â†?Sysmac (NJ/NX)
-- If they mention CX-Programmer â†?Legacy (CJ/CS/CP)
-- If they mention motion control or EtherCAT â†?Likely Sysmac
+- If they mention Sysmac Studio ->Sysmac (NJ/NX)
+- If they mention CX-Programmer ->Legacy (CJ/CS/CP)
+- If they mention motion control or EtherCAT ->Likely Sysmac
 
 ### Mixing Vendors
 If a user asks to migrate from Omron to another vendor (or vice versa), explicitly map the concepts:
-- Omron Global Variable â†?Siemens Global DB / Rockwell Controller-Scoped Tag
-- Omron Primary Periodic Task â†?Siemens OB1 / Rockwell Continuous Task
-- Omron FB Instance â†?Siemens FB Instance / Rockwell AOI Instance
-- Omron CIO/D/W (legacy) â†?Mitsubishi D/M devices / Siemens DB
+- Omron Global Variable ->Siemens Global DB / Rockwell Controller-Scoped Tag
+- Omron Primary Periodic Task ->Siemens OB1 / Rockwell Continuous Task
+- Omron FB Instance ->Siemens FB Instance / Rockwell AOI Instance
+- Omron CIO/D/W (legacy) ->Mitsubishi D/M devices / Siemens DB
 
 ---
 

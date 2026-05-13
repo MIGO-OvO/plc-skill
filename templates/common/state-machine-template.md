@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use for step-based machine or process control in FX3U ST projects.
+Use for step-based machine or process control in IEC 61131-3 ST projects.
 
 ## Suitable for
 

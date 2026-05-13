@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use when reviewing ST or GX Works2 project logic for conflicting writes, hidden ownership, and scan-cycle side effects.
+Use when reviewing PLC logic for conflicting writes, hidden ownership, and scan-cycle side effects.
 
 ## Review target
 

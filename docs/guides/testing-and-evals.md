@@ -10,8 +10,11 @@ We use two complementary validation layers:
    - Checks internal markdown references.
    - Checks for placeholder text left in user-facing docs.
    - Checks `package.json` and `package-lock.json` root metadata consistency.
+   - Checks `SKILL.md` frontmatter, runtime payload boundaries, text encoding artifacts, and common-template vendor neutrality.
+   - Parses machine-readable eval JSON and confirms coverage against `evals/eval-matrix.md`.
 2. **Prompt/eval case review (`evals/*.md`)**
    - Defines the expected agent behavior for generation, routing, review, debugging, and safety-boundary cases.
+   - Mirrors key expectations in `evals/evals.json` and `evals/trigger-queries.json` for tooling.
 
 ## Purpose of Evals
 
@@ -31,6 +34,8 @@ The core of our prompt evaluation framework lives in `evals/eval-matrix.md`. Thi
 3.  **Review**: Performing code reviews against industrial best practices, style guides, and safety standards.
 4.  **Debugging**: Diagnosing faults, simulating logic execution, and proposing corrective actions for broken routines.
 5.  **Routing**: Validating that specific domain queries are handed off accurately to the appropriate internal tools or sub-agents.
+
+`evals/evals.json` is the machine-readable behavior suite. Each entry must include `id`, `prompt`, `expected_output`, and objective `assertions`. `evals/trigger-queries.json` holds positive and negative trigger probes. `npm test` fails if a matrix case is missing from the JSON suite.
 
 ## Vendor-Specific Evals
 
@@ -55,9 +60,10 @@ IEC 61131-3 languages each have unique pitfalls and paradigms. Our language-spec
 Before submitting a Pull Request or accepting a major edit to the skill, verify both the repository checks and the relevant eval cases.
 
 **Minimum Regression Checklist:**
-- [ ] **Repository Verification**: Run `npm test` and resolve broken links, placeholder text, and package metadata drift.
+- [ ] **Repository Verification**: Run `npm test` and resolve broken links, placeholder text, package metadata drift, payload-boundary issues, encoding artifacts, and eval JSON coverage gaps.
 - [ ] **Conservative Behavior Check**: Verify the skill still refuses to guess hardware mapping or bypass safety interlocks when information is missing.
 - [ ] **Vendor Syntax Verification**: Run generation cases for at least one major vendor (Siemens, Rockwell, or Mitsubishi) to confirm addressing formats remain strictly compliant.
 - [ ] **Language Anti-Pattern Check**: Validate that generated Ladder Diagram logic does not exhibit multiple-coil syndrome or unsafe latching conditions.
 - [ ] **SFC Qualifier Check**: Ensure any modifications to SFC handling have not broken the definitions or usage of N, S, and R qualifiers.
 - [ ] **Trigger Validation**: Run the Routing evaluation cases to ensure your changes have not hijacked unrelated queries or broken existing activation triggers.
+- [ ] **Machine-readable Evals**: Keep `evals/evals.json` and `evals/trigger-queries.json` aligned with any Markdown eval changes.

@@ -1,6 +1,7 @@
 ---
 name: plc-skill
-description: General PLC development, explanation, review, refactoring, debugging, and troubleshooting skill across IEC 61131-3 style industrial control work. Use when the request involves PLC logic, sequence control, state machines, alarms, interlocks, timers, counters, I/O mapping, Structured Text (ST), Ladder Diagram (LD), Function Block Diagram (FBD), Sequential Function Chart (SFC), program structure, code review, maintainability, or commissioning/debugging. Route through the common PLC layer first, then prefer the matching vendor path when the user mentions Siemens, Rockwell, Mitsubishi, Omron, Beckhoff, Schneider, Delta, Keyence, Panasonic, Codesys, related software, CPU families, device models, or vendor-specific terminology. Do not prefer this skill for generic electronics, pure wiring-only work without logic context, broad industrial networking without control-program context, or high-confidence safety conclusions without confirmed field conditions.
+description: Vendor-aware PLC engineering skill for IEC 61131-3 logic design, review, debugging, refactoring, and documentation routing.
+when_to_use: Use for PLC programming questions involving ST, LD, FBD, SFC, state machines, sequences, alarms, interlocks, timers, counters, I/O mapping, scan-cycle behavior, or vendor-specific PLC environments such as Siemens, Rockwell, Mitsubishi, Omron, Beckhoff, Schneider, Delta, Keyence, Panasonic, or CODESYS. Do not use for generic electronics, wiring-only work, broad industrial networking, or final safety certification.
 metadata:
   {
     "openclaw":
@@ -68,13 +69,16 @@ This skill does not default to:
 
 ## Read order
 
-Start with:
+Always start with:
 
 - `references/common/scope-and-trigger-rules.md`
 - `references/common/task-router.md`
 - `references/common/knowledge-priority.md`
-- `references/vendors/vendor-routing.md`
-- `templates/common/template-map.md`
+
+Then conditionally load:
+
+- `references/vendors/vendor-routing.md` only when the request includes vendor, software, CPU family, device model, memory/tag, or platform terminology cues.
+- `templates/common/template-map.md` only for generation, refactor, or pattern-selection tasks.
 
 Then load only the narrowest files needed.
 

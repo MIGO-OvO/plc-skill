@@ -10,7 +10,7 @@ Typical evidence categories behind this file:
 
 - IEC 61131-3 overview material for language and configuration concepts
 - PLCopen guidance on software construction, structuring, reuse, and maintainability
-- Cross-checking against Mitsubishi-specific constraints when platform behavior matters
+- Cross-checking against vendor-specific constraints when platform behavior matters
 
 ## IEC 61131-3 baseline relevant to this skill
 
@@ -23,7 +23,7 @@ The most relevant confirmed points are:
 
 ## What this means for this skill
 
-For FX3U + GX Works2 + Structured Project + ST work:
+For vendor-specific PLC work:
 
 - ST output should be treated as a standards-aligned textual language, not as free-form pseudocode
 - SFC ideas can inform program structuring even when the final answer stays in ST
@@ -54,11 +54,11 @@ Use PLCopen / IEC knowledge as:
 - a review framework for maintainability
 - a justification for modular design and reuse
 
-Do not use it as a reason to silently override Mitsubishi-specific behavior.
+Do not use it as a reason to silently override vendor-specific behavior.
 
-When Mitsubishi-specific syntax, device behavior, or project constraints matter:
+When vendor-specific syntax, device behavior, or project constraints matter:
 
-- Mitsubishi manuals and Mitsubishi-focused references outrank generic PLCopen guidance
+- matching vendor manuals and vendor-focused references outrank generic PLCopen guidance
 
 ## Practical rules for responses
 
@@ -79,6 +79,6 @@ Current confirmed material is enough to support:
 
 It is not enough to claim:
 
-- exact Mitsubishi ST syntax from PLCopen alone
-- exact FX3U instruction support from IEC / PLCopen alone
+- exact vendor ST syntax from PLCopen alone
+- exact device or instruction support from IEC / PLCopen alone
 - platform-specific compiler behavior from standards pages alone

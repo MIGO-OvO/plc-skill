@@ -7,7 +7,7 @@ Use this file when the task depends on evidence quality, source ranking, or conf
 Use sources in this order:
 
 1. Bundled references in `references/`
-2. Mitsubishi official manuals and official explanations
+2. Matching vendor official manuals and official software documentation
 3. IEC 61131-3 related standards knowledge
 4. PLCopen engineering and coding guidance
 5. Bundled templates and examples in `templates/` and `examples/`
@@ -19,7 +19,7 @@ Use sources in this order:
 - If bundled references are not enough, say what category is missing before filling gaps with lower-priority material.
 - Do not treat forum or blog content as authoritative when official material is available.
 - Do not imply certainty when the answer is partly inferential.
-- If official documentation and bundled references disagree, Mitsubishi-specific official material outranks generic standards guidance.
+- If official documentation and bundled references disagree, official material for the identified platform outranks generic standards guidance.
 
 ## Evidence labels for responses
 
@@ -35,4 +35,4 @@ When the task is analysis-heavy, use labels like:
 - If a user asks for code generation, still identify the factual basis and assumptions.
 - If a user asks for troubleshooting, separate observed facts from hypotheses.
 - If a user asks for optimization, explain what is style guidance versus hard device or tool constraints.
-- If the task depends on exact platform behavior that is not present in bundled references, say that exact confirmation requires Mitsubishi manuals or project evidence.
+- If the task depends on exact platform behavior that is not present in bundled references, say that exact confirmation requires the matching vendor manuals or project evidence.
